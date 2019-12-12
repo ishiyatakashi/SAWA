@@ -1,0 +1,82 @@
+{% extends "maindata/bace.html"%}
+
+{% block content %}
+
+    <!-- ヘッダー -->
+    <div id="header">
+        <div class="inner">
+            <!-- ロゴ -->
+            <div class="logo">
+                Sawa
+            </div>
+            <!-- / ロゴ -->
+
+            <!-- migi -->
+            <div class="info">
+            </div>
+            <!--  -->
+        </div>
+
+    </div>
+    <!-- / ヘッダー -->
+
+    <!-- メイン画像 -->
+    <!--
+    <div id="mainBanner" class="mainImg">
+        <div class="inner">
+            <img src="images/mainImg.jpg" width="940" height="300" alt="">
+            <div class="slogan">
+                <h2></h2>
+                <h3></h3>
+            </div>
+        </div>
+    </div>-->
+    <!-- / メイン画像 -->
+
+    <div id="wrapper">
+        <section class="gridWrapper" id="sub">
+            <article class="grid col12">
+                <div class="Dekai">
+                    SAWA
+                </div>
+                <div class="Dekaisub">～あなたの顔〇〇っぽいかも？～</div>
+            </article>
+        </section>
+        <form action="file_select.html" method="post">
+            <label>
+                <span class="btn-square">
+                    ファイルから選択
+                    <input type="submit" style="display: none" name="file_select">
+                </span>
+            </label>
+        </form>
+        <a href="" class="btn-square ">Webカメラで撮影
+        </a>
+        <a href="" class="btn-square" id="btn-select">カテゴリー選択</a>
+    </div>
+    <!-- / WRAPPER -->
+
+    <!-- フッター -->
+    <div id="footer">
+        <div class="inner">
+
+            <!-- 3カラム -->
+            <section class="gridWrapper">
+
+                <article class="grid">
+                    <!-- ロゴ -->
+                    <p class="logo"><a href="top.html">Sisinisora<br /><span></span></a></p>
+                    <!-- / ロゴ -->
+                </article>
+
+                <article class="grid col3">
+                    <p>2019 Sisinibora Design by <a href="http://f-tpl.com" target="_blank" rel="nofollow">http://f-tpl.com</a></p>
+                </article>
+
+            </section>
+            <!-- / 3カラム -->
+
+        </div>
+    </div>
+    <!-- / フッター -->
+{% endblock content %}
