@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html dir="ltr" lang="ja">
 
@@ -58,7 +60,7 @@
         </section>
         <div class="center">
             <label>
-                <form action="file_select.html" method="post">
+                <form action="file_select/" method="get">
                     <span class="btn-square">
                         ファイルから選択
                         <input type="submit" style="display: none" name="file_select">
@@ -66,17 +68,9 @@
                 </form>
             </label>
             <label>
-                <form action="cgi-bin/file_select.py" method="post">
+                <form action="camera/" method="get">
                     <span class="btn-square">
                         Webカメラで撮影
-                        <input type="submit" style="display: none" name="file_select">
-                    </span>
-                </form>
-            </label>
-            <label>
-                <form action="category_select.html" method="post">
-                    <span class="btn-square">
-                        カテゴリ選択
                         <input type="submit" style="display: none" name="file_select">
                     </span>
                 </form>
@@ -108,5 +102,4 @@
         </div>
     </div>
     <!-- / フッター -->
-    <script src="sawa.js"></script>
 </body></html>

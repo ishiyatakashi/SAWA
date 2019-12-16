@@ -1,7 +1,23 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 
-def genre_list(request):
-    """ジャンルの一覧"""
-    return HttpResponse('ジャンル一覧')
+def top(request):
+    """top/タイトル一覧一覧"""
+    return render(request, 'maindata/top.html')
+
+
+def camera(request):
+
+    return render(request, 'maindata/camera.html')
+
+
+def file_select(request):
+    return render(request, 'maindata/file_select.html')
+
+
+def category(request):
+    return render(request, 'maindata/camera_index.html')
+
+
+def result(request):
+    return render(request, 'maindata/result.html')
