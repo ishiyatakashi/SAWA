@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+        <meta name="description" content="SAWA">
+        <meta name="keywords" content="">
+        <title>SAWA</title>
+        <link rel="stylesheet" href="../../static/maindata/css/style.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../../static/maindata/css/camera_style.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../../static/maindata/css/bootstrap.css" type="text/css" media="screen">
+        <!--[if lt IE 9]>
+        <script src="../../static/maindata/js/webcam.js"></script>
+<![endif]-->
+    </head>
+
+    <body>
+        <!-- ヘッダー -->
+        <div id="header">
+            <div class="inner">
+                <div class="logo">
+                    Sawa
+                </div>
+            </div>
+        </div>
+        <div id="wrapper">
+        <section class="gridWrapper img">
+            <br><video id="camera" width="336" height="336" class="camera"></video>
+            <canvas id="picture" width="336" height="336" class="result"></canvas>
+        </section>
+        <form action="result.html" method="post" style="text-align: center">
+            <div id="cancel" class="cancel">
+                <label>
+                    <br><br>
+                    <span class="btn btn-primary">
+                        撮りなおす
+                        <input type="button" style="display: none" id="cancel" class="cancel">
+                    </span>
+                </label>
+            </div>
+            <div id="shutter" class="shutter">
+                <label>
+                    <br><br>
+                    <span class="btn btn-primary">
+                        写真を撮る
+                        <input type="button" style="display: none" id="shutter" class="shutter">
+                    </span>
+                </label>
+                </div>
+            <div class="next" id="next">
+                <label>
+                    <span class="btn btn-secondary">
+                        決定
+                        <input id="submit-button next" type="submit" style="display: none" class="next">
+                    </span>
+                </label>
+            </div>
+            <br><br>
+        </form>
+            <script src="../../static/maindata/js/webcam.js"></script>
+    </div>
+
+        <!-- フッター -->
+        <div id="footer">
+            <div class="inner">
+                <section class="gridWrapper">
+                    <article class="grid">
+                        <p class="logo"><a href="index.html">Sisinibora<br /><span></span></a></p>
+                    </article>
+                    <article class="grid col3">
+                        <p>2019 Sisinibora All Design by <a href="http://f-tpl.com" target="_blank" rel="nofollow">http://f-tpl.com</a></p>
+                    </article>
+                </section>
+            </div>
+        </div>
+        <!-- / フッター -->
+
+    </body></html>

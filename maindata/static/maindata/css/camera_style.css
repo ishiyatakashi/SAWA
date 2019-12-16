@@ -1,0 +1,15 @@
+.result{
+    display:none;
+}
+.cancel{
+    display:none;
+}
+.next{
+    display:none;
+}
+.camera{
+    display:inline;
+}
+.shutter{
+    display:inline;
+}
