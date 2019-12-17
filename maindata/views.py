@@ -1,6 +1,6 @@
 from django.http import HttpResponseRedirect
-from django.template.context_processors import csrf
 from django.shortcuts import render
+from django.template.context_processors import csrf
 
 
 def top(request):
@@ -27,6 +27,7 @@ def send_file(request):
         c = {
             'name': request.POST["name"]
         }
+        image_file_create.image_create(request)
 
     else:
 
