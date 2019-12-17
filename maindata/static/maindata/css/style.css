@@ -670,6 +670,6 @@ table.table th {
     border: 0.2em solid #d3d3d3;/*チェックボックスの枠*/
 }
 .cp_ipcheck input:checked + label:before {
-    border-color: #00aaff;/*てぇっく後塗りつぶす*/
+    border-color: #00aaff;/*ちぇっく後塗りつぶす*/
     background: #00aaff;
 }

@@ -18,7 +18,7 @@ def file_select(request):
 
 
 def category(request):
-    return render(request, 'maindata/camera_index.html')
+    return render(request, 'maindata/category_select.html')
 
 
 def send_file(request):
