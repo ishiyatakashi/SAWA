@@ -261,51 +261,7 @@ ul#topnav a:hover {
 }
 
 
-/**************************
-/* メイン画像（トップページ+サブページ）
-**************************/
-#mainBanner {
-    clear: both;
-    line-height: 0;
-    background: #ff5959;
-}
 
-#mainBanner .inner {
-    position: relative;
-}
-
-#mainBanner img {
-    max-width: 100%;
-    height: auto;
-}
-
-.slogan {
-    position: absolute;
-    max-width: 100%;
-    height: auto;
-    bottom: 10px;
-    left: 10px;
-    padding: 5px 10px;
-    line-height: 1.4;
-    z-index: 100;
-    background: url(images/tp2.png);
-}
-
-.subImg .slogan {
-    left: auto;
-    right: 10px;
-}
-
-.slogan h2 {
-    padding-bottom: 5px;
-    color: #fff;
-    font-size: 20px;
-}
-
-.slogan h3 {
-    font-size: 14px;
-    color: #ccc;
-}
 
 
 /**************************
@@ -313,7 +269,7 @@ ul#topnav a:hover {
 **************************/
 .gridWrapper {
     clear: both;
-    padding: 0px 0;
+    padding: 0 0;
     overflow: hidden;
     margin: auto;
 }
@@ -368,7 +324,7 @@ ul#topnav a:hover {
     font-weight: bold;
     padding: 8px 16px;
     border: 1px dashed #FFF;
-    box-shadow: 0px 0px 0px 5px #ff5959;
+    box-shadow: 0 0 0 5px #ff5959;
     /* box-shadowで外枠を */
 }
 
@@ -469,11 +425,14 @@ h3.heading,
     clear: right;
     margin: 3px 1px 10px 10px;
 }
+/*
 .aligncenter {
     float: center;
     clear: center;
     margin: 3px 1px 10px 10px;
 }
+*/
+
 
 img.frame,
 #gallery img {
@@ -642,13 +601,75 @@ table.table th {
     transform: translateY(4px);/*下に動く*/
     border-bottom: none;/*線を消す*/
 }
+/*
 #btn-select {
     margin: none;
-}
+}*/
 
 .img {
     width: 300px;
     height: auto;
     text-align: center;
 }
-
+/*チェックボックス*/
+.cp_ipcheck {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.cp_ipcheck:before, .cp_ipcheck:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+.cp_ipcheck .box {
+    width:33%;
+    margin: 2em auto;
+    text-align: left;
+    border: 1px solid white;
+    border-radius: 3px;
+    background: #ffffff;
+    float: left
+}
+.cp_ipcheck input[type=checkbox] {
+    display: none;
+}
+.cp_ipcheck label:focus,
+.cp_ipcheck label:hover,
+.cp_ipcheck label:active,
+.cp_ipcheck input:checked + label {
+    color: #00aaff;/*文字部分*/
+}
+.cp_ipcheck label:focus:before,
+.cp_ipcheck label:hover:before,
+.cp_ipcheck label:active:before,
+.cp_ipcheck input:checked + label:before {
+    border-color: #00aaff;
+    background: #ffffff;
+}
+.cp_ipcheck label {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 1em 1em 1em 3em;
+    cursor: pointer;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background: #ffffff;
+}
+.cp_ipcheck label:before {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    width: 10px;
+    height: 10px;
+    content: '';
+    border: 0.2em solid #d3d3d3;/*チェックボックスの枠*/
+}
+.cp_ipcheck input:checked + label:before {
+    border-color: #00aaff;/*ちぇっく後塗りつぶす*/
+    background: #00aaff;
+}

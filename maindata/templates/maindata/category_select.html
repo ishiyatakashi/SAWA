@@ -1,68 +1,50 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="ja">
+{% extends "maindata/bace.html" %}
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
-        <meta name="description" content="SAWA">
-        <meta name="keywords" content="">
-        <title>SAWA</title>
-        <link rel="stylesheet" href="style.css" type="text/css" media="screen">
-        <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
-        <!--[if lt IE 9]>
-<script src="js/html5.js"></script>
-<script src="js/css3-mediaqueries.js"></script>
-<![endif]-->
-    </head>
+{% block title %}{% endblock title %}
 
-    <body>
-        <!-- ヘッダー -->
-        <div id="header">
-            <div class="inner">
-                <div class="logo">
-                    Sawa
+{% block content %}
+
+    <div id="wrapper">
+        <div class="center" style="font-size: 40px">カテゴリ選択</div>
+        <form action="result.html" method="post" class="center">
+            <div class="cp_ipcheck">
+                <div class="box">
+                    <input type="checkbox" id="a_ch1" />
+                    <label for="a_ch1">アイドル</label>
+                    <input type="checkbox" id="a_ch2" />
+                    <label for="a_ch2">プロ野球選手</label>
+                    <input type="checkbox" id="a_ch3" />
+                    <label for="a_ch3">俳優</label>
+                    <input type="checkbox" id="a_ch10" />
+                    <label for="a_ch10">女優</label>
+                </div>
+                <div class="box">
+                    <input type="checkbox" id="a_ch4" />
+                    <label for="a_ch4">ミュージシャン</label>
+                    <input type="checkbox" id="a_ch5" />
+                    <label for="a_ch5">ユーチューバー</label>
+                    <input type="checkbox" id="a_ch6" />
+                    <label for="a_ch6">アーティスト</label>
+                    <input type="checkbox" id="a_ch11" />
+                    <label for="a_ch11">野菜</label>
+                </div>
+                <div class="box">
+                    <input type="checkbox" id="a_ch7" />
+                    <label for="a_ch7">果物</label>
+                    <input type="checkbox" id="a_ch8" />
+                    <label for="a_ch8">動物</label>
+                    <input type="checkbox" id="a_ch9" />
+                    <label for="a_ch9">ゲーム実況者</label>
+                    <input type="checkbox" id="a_ch12" />
+                    <label for="a_ch12">平均の顔</label>
                 </div>
             </div>
-        </div>
-        <div id="wrapper">
-           <div class="Dekaisub center">カテゴリ選択</div>
-            <form action="result.html" method="post" class="center">
-                <label>
-                    <br><br>
-                    <span class="btn btn-primary">
-                        categoryA
-                        <input type="checkbox">
-                    </span>
-                    <span class="btn btn-primary">
-                        categoruBボタン幅が違う
-                        <input type="checkbox">
-                    </span>
-                </label>
-                <label>
-                    <span class="btn btn-secondary">
-                        決定btn-scondary
-                        <input id="submit-button" type="submit" style="display: none">
-                    </span>
-                </label>
-                <br><br>
-            </form>
-        </div>
-        <!-- / WRAPPER -->
-
-        <!-- フッター -->
-        <div id="footer">
-            <div class="inner">
-                <section class="gridWrapper">
-                    <article class="grid">
-                        <p class="logo"><a href="index.html">Sisinibora<br /><span></span></a></p>
-                    </article>
-                    <article class="grid col3">
-                        <p>2019 Sisinibora All Design by <a href="http://f-tpl.com" target="_blank" rel="nofollow">http://f-tpl.com</a></p>
-                    </article>
-                </section>
-            </div>
-        </div>
-        <!-- / フッター -->
-
-    </body></html>
+            <label>
+                <span class="btn btn-secondary">
+                    決定
+                    <input id="submit-button" type="submit" style="display: none">
+                </span>
+            </label>
+        </form>
+    </div>
+{% endblock content %}
