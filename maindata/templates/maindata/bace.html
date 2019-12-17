@@ -3,25 +3,41 @@
 <html lang="{{ LANGUAGE_CODE|default:"en-us" }}">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="{% static 'maindata/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="../../static/maindata/css/style.css">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="SAWA">
+    <meta name="keywords" content="">
+    <title>{% block title %}SAWA{% endblock %}</title>
+    <link rel="stylesheet" href="../../static/maindata/css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../../static/maindata/css/camera_style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../../static/maindata/css/bootstrap.css" type="text/css" media="screen">
+    <script src="../../static/maindata/js/webcam.js"></script>
     {% block extra_css %}{% endblock %}
-<title>{% block title %}SAWA{% endblock %}</title>
 </head>
 <body>
-<div id="header">
+    <div id="header">
         <div class="inner">
             <div class="logo">
                 Sawa
             </div>
         </div>
     </div>
-  <div class="container">
-    {% block content %}
-      {{ content }}
-    {% endblock %}
-  </div>
+    <div class="container">
+        {% block content %}
+            {{ content }}
+        {% endblock %}
+    </div>
+    <div id="footer">
+        <div class="inner">
+            <section class="gridWrapper">
+                <article class="grid">
+                    <p class="logo"><a href="index.html">Sisinibora<br /><span></span></a></p>
+                </article>
+                <article class="grid col3">
+                    <p>2019 Sisinibora All Design by <a href="http://f-tpl.com" target="_blank" rel="nofollow">http://f-tpl.com</a></p>
+                </article>
+            </section>
+        </div>
+    </div>
 <script src="{% static 'maindata/css/style.css' %}"></script>
 <script src="{% static 'maindata/js/bootstrap.bundle.min.js' %}"></script>
 {% block extra_js %}{% endblock %}

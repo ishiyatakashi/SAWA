@@ -1,54 +1,8 @@
+{% extends "maindata/bace.html" %}
 
+{% block title %}{% endblock title %}
 
-<!DOCTYPE html>
-<html dir="ltr" lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="description" content="SAWA">
-    <meta name="keywords" content="">
-    <title>SAWA</title>
-    <link rel="stylesheet" href="../../static/maindata/css/style.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="../../static/maindata/css/bootstrap.css">
-    <!--[if lt IE 9]>
-    <!-
-    <script src="js/html5.js"></script>
-    <script src="js/css3-mediaqueries.js"></script> -->
-    <!--[endif]-->
-</head>
-
-<body>
-    <!-- ヘッダー -->
-    <div id="header">
-        <div class="inner">
-            <!-- ロゴ -->
-            <div class="logo">
-                Sawa
-            </div>
-            <!-- / ロゴ -->
-
-            <!-- migi -->
-            <div class="info">
-            </div>
-            <!--  -->
-        </div>
-
-    </div>
-    <!-- / ヘッダー -->
-
-    <!-- メイン画像 -->
-    <!--
-    <div id="mainBanner" class="mainImg">
-        <div class="inner">
-            <img src="images/mainImg.jpg" width="940" height="300" alt="">
-            <div class="slogan">
-                <h2></h2>
-                <h3></h3>
-            </div>
-        </div>
-    </div>
-    <!- / メイン画像 -->
+{% block content %}
     <div id="wrapper">
         <section class="gridWrapper" id="sub">
             <article class="grid col12">
@@ -75,31 +29,17 @@
                     </span>
                 </form>
             </label>
+            <label>
+                <form action="category/" method="get">
+                    <span class="btn-square">
+                        [test]category_select.html
+                        <input type="submit" style="display: none" name="category">
+                    </span>
+                </form>
+            </label>
+
         </div>
     </div>
     <!-- / WRAPPER -->
 
-    <!-- フッター -->
-    <div id="footer">
-        <div class="inner">
-
-            <!-- 3カラム -->
-            <section class="gridWrapper">
-
-                <article class="grid">
-                    <!-- ロゴ -->
-                    <p class="logo"><a href="top.html">Sisinisora<br /><span></span></a></p>
-                    <!-- / ロゴ -->
-                </article>
-
-                <article class="grid col3">
-                    <p>2019 Sisinibora Design by <a href="http://f-tpl.com" target="_blank" rel="nofollow">http://f-tpl.com</a></p>
-                </article>
-
-            </section>
-            <!-- / 3カラム -->
-
-        </div>
-    </div>
-    <!-- / フッター -->
-</body></html>
+{% endblock content %}
