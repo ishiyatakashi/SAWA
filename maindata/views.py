@@ -1,3 +1,5 @@
+from django.http import HttpResponseRedirect
+from django.template.context_processors import csrf
 from django.shortcuts import render
 
 
@@ -19,5 +21,16 @@ def category(request):
     return render(request, 'maindata/camera_index.html')
 
 
-def result(request):
-    return render(request, 'maindata/result.html')
+def send_file(request):
+    site = 'maindata/result.html'
+    if request.method == 'POST':
+        c = {
+            'name': request.POST["name"]
+        }
+
+    else:
+
+        return HttpResponseRedirect("/")
+
+    c.update(csrf(request))
+    return render(request, site, c)

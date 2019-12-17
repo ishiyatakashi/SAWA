@@ -1,5 +1,6 @@
 from django.urls import path
 from maindata import views
+from django.template.context_processors import csrf
 
 app_name = 'maindata'
 urlpatterns = [
@@ -7,6 +8,5 @@ urlpatterns = [
     path('file_select/', views.file_select, name='file_select'),
     path('category/', views.category, name='category'),
     path('camera/', views.camera, name='camera'),
-    path('result/', views.result, name='result'),
-
+    path('file_select/sendfile/', views.send_file, name='imageCR'),
 ]

@@ -30,7 +30,8 @@
             <br><img src="../../static/maindata/imgs/noimg.jpg" class="not_image">
 
         </section>
-        <form action="" method="post" style="text-align: center">
+        <form action="sendfile" method="post" style="text-align: center">
+            {% csrf_token %}
             <label>
                 <br><br>
                 <span class="btn btn-primary">
