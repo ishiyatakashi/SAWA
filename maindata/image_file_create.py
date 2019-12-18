@@ -1,3 +1,5 @@
+import shutil
+
 from PIL import Image
 import sys
 import cv2
@@ -7,7 +9,11 @@ sys.path.append("/usr/local/lib/python2.7/site-packages")
 
 
 def image_create(request):
-    image = cv2.imread(request.FILES['file'])
+    request_file = request.FILES['file']
+
+    image = cv2.imread()
+
+    print(image)
     cascade_path = cv2.CascadeClassifier('C:/Users/s20182089/AppData/Local/Continuum/anaconda3/Lib/site-packages/cv2'
                                          '/data/haarcascade_frontalface_default.xml')
     # 画像の保存先(フォルダに入れる場合最後にスラッシュ必須) 空白なら起動しているディレクトリです
