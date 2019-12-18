@@ -8,7 +8,7 @@ urlpatterns = [
     path('file_select/', views.file_select, name='file_select'),
     path('category/', views.category, name='category'),
     path('camera/', views.camera, name='camera'),
-    path('file_select/sendfile/', views.send_file, name='imageCR'),
+    re_path('sendfile/', views.send_file, name='imageCR'),
     re_path('result/', views.result, name='result'),
 
 ]
