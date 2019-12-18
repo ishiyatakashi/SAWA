@@ -1,15 +1,11 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # coding: utf-8
 
 # In[1]:
 
 
 from keras.models import load_model
-import numpy as np
 from keras.preprocessing.image import img_to_array, load_img
-import os
-import json
-import glob
 
 
 def learning(self, model_path, img_path, category_table):

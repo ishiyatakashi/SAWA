@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python
+#!/usr/bin/env python
 # coding: utf-8
 
 
@@ -21,14 +21,13 @@ def name_change(path, change_list) -> object:
     try:
         with open(path, 'r', encoding='UTF-8')as f:
             category_table = json.load(f)
-        for param in change_list[]:
+        for param in change_list:
             for tag in category_table:
                 if tag["id"] == param:
                     select_categories.append(tag.keys())
         return select_categories
     except FileExistsError:
         return FileExistsError
-
 
 def creat_category_table(self, path):
     """カテゴリーテーブルの作成
