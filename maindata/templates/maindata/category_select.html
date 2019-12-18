@@ -6,7 +6,8 @@
 
     <div id="wrapper">
         <div class="center" style="font-size: 40px">カテゴリ選択</div>
-        <form action="result.html" method="post" class="center">
+        <form action="result/" method="post" class="center">
+            {% csrf_token %}
             <div class="cp_ipcheck">
                 <div class="box">
                     <input type="checkbox" id="a_ch1" />
