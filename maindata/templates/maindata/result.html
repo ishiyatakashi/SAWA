@@ -1,50 +1,21 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="ja">
+{% extends "maindata/bace.html" %}
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
-        <meta name="description" content="SAWA">
-        <meta name="keywords" content="">
-        <title>SAWA</title>
-        <link rel="stylesheet" href="style.css" type="text/css" media="screen">
-        <link rel="stylesheet" href="./css/main.css">
-        <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
-        <!--[if lt IE 9]>
-<script src="js/html5.js"></script>
-<script src="js/css3-mediaqueries.js"></script>
-<![endif]-->
-    </head>
+{% block title %}{% endblock title %}
 
-    <body>
-        <!-- ヘッダー -->
-        <div id="header">
-            <div class="inner">
-                <div class="logo">
-                    Sawa
-                </div>
-            </div>
-        </div>
-        <div id="wrapper">
-            <section class="gridWrapper">
-            </section>
+{% block content %}
 
-        </div>
-        <!-- / WRAPPER -->
+    <div id="wrapper">
+        <div class="center" style="font-size: 40px">あなたは....</div>
+        <div class="center" style="font-size: 50px"><a style="font-size: 60px">〇〇</a>っぽい<a style="font-size: 60px">〇〇</a>です</div>
+    </div>
 
-        <!-- フッター -->
-        <div id="footer">
-            <div class="inner">
-                <section class="gridWrapper">
-                    <article class="grid">
-                        <p class="logo"><a href="index.html">Sisinibora<br /><span></span></a></p>
-                    </article>
-                    <article class="grid col3">
-                        <p>2019 Sisinibora All Design by <a href="http://f-tpl.com" target="_blank" rel="nofollow">http://f-tpl.com</a></p>
-                    </article>
-                </section>
-            </div>
-        </div>
-        <!-- / フッター -->
+    <!-- Twitter 共有ボタンスクリプト -->
+    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="あなたは〇〇っぽい？" data-lang="ja" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-    </body></html>
+    <!-- Facebook 共有ボタンスクリプト (保留!!!!)-->
+    <!--
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script>
+    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" style="font-size: 10px">シェア</a></div>
+    -->
+{% endblock content %}
