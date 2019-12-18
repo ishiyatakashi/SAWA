@@ -6,37 +6,37 @@
 
     <div id="wrapper">
         <div class="center" style="font-size: 40px">カテゴリ選択</div>
-        <form action="result/" method="post" class="center">
+        <form action="result/" class="center" method="post" name="selectCategory">
             {% csrf_token %}
             <div class="cp_ipcheck">
                 <div class="box">
-                    <input type="checkbox" id="a_ch1" />
+                    <input type="checkbox" id="a_ch1" value="hu01" />
                     <label for="a_ch1">アイドル</label>
-                    <input type="checkbox" id="a_ch2" />
+                    <input type="checkbox" id="a_ch2"  value="hu02"/>
                     <label for="a_ch2">プロ野球選手</label>
-                    <input type="checkbox" id="a_ch3" />
+                    <input type="checkbox" id="a_ch3" value="hu03"/>
                     <label for="a_ch3">俳優</label>
-                    <input type="checkbox" id="a_ch10" />
+                    <input type="checkbox" id="a_ch10" value="hu04"/>
                     <label for="a_ch10">女優</label>
                 </div>
                 <div class="box">
-                    <input type="checkbox" id="a_ch4" />
+                    <input type="checkbox" id="a_ch4" value="hu05" />
                     <label for="a_ch4">ミュージシャン</label>
-                    <input type="checkbox" id="a_ch5" />
+                    <input type="checkbox" id="a_ch5" value="hu06"/>
                     <label for="a_ch5">ユーチューバー</label>
-                    <input type="checkbox" id="a_ch6" />
+                    <input type="checkbox" id="a_ch6" value="hu07" />
                     <label for="a_ch6">アーティスト</label>
-                    <input type="checkbox" id="a_ch11" />
+                    <input type="checkbox" id="a_ch11" value="pl01"/>
                     <label for="a_ch11">野菜</label>
                 </div>
                 <div class="box">
-                    <input type="checkbox" id="a_ch7" />
+                    <input type="checkbox" id="a_ch7" value="pl02"/>
                     <label for="a_ch7">果物</label>
-                    <input type="checkbox" id="a_ch8" />
+                    <input type="checkbox" id="a_ch8" value="an01"/>
                     <label for="a_ch8">動物</label>
-                    <input type="checkbox" id="a_ch9" />
+                    <input type="checkbox" id="a_ch9" value="hu08"/>
                     <label for="a_ch9">ゲーム実況者</label>
-                    <input type="checkbox" id="a_ch12" />
+                    <input type="checkbox" id="a_ch12" value="hu09"/>
                     <label for="a_ch12">総理大臣</label>
                 </div>
             </div>
