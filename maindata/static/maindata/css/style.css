@@ -96,7 +96,7 @@ q:after {
 
 blockquote,
 q {
-    quotes: """";
+    quotes: "" "";
 }
 
 a img {
@@ -156,7 +156,7 @@ a:focus {
 /* 全体
 ------------------------------------------------------------*/
 #wrapper {
-    margin:0 auto;
+    margin: 0 auto;
     padding: 0 1%;
     width: 98%;
     position: relative;
@@ -259,9 +259,6 @@ ul#topnav li.active a,
 ul#topnav a:hover {
     color: #ccc;
 }
-
-
-
 
 
 /**************************
@@ -425,6 +422,7 @@ h3.heading,
     clear: right;
     margin: 3px 1px 10px 10px;
 }
+
 /*
 .aligncenter {
     float: center;
@@ -516,7 +514,7 @@ table.table th {
 
 
 /* PC用 */
-@media only screen and (min-width:960px) {
+@media only screen and (min-width: 960px) {
 
     #wrapper,
     .inner,
@@ -570,37 +568,40 @@ table.table th {
 }
 
 
-
 /* 追加機能 */
-.center{
+.center {
     text-align: center;
 }
-.parent{
+
+.parent {
     border: 1px solid #aaa;
     position: relative;
     height: 200px;
     width: 300px;
 }
 
-.padding{
+.padding {
     border: 1px solid #aaa;
     padding: 20px 40px;
 }
+
 .btn-square {
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
-    background: #668ad8;/*ボタン色*/
+    background: #668ad8; /*ボタン色*/
     color: #FFF;
     border-bottom: solid 4px #627295;
     border-radius: 3px;
 }
+
 .btn-square:active {
     /*ボタンを押したとき*/
     -webkit-transform: translateY(4px);
-    transform: translateY(4px);/*下に動く*/
-    border-bottom: none;/*線を消す*/
+    transform: translateY(4px); /*下に動く*/
+    border-bottom: none; /*線を消す*/
 }
+
 /*
 #btn-select {
     margin: none;
@@ -611,17 +612,20 @@ table.table th {
     height: auto;
     text-align: center;
 }
+
 /*チェックボックス*/
 .cp_ipcheck {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 .cp_ipcheck:before, .cp_ipcheck:after {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
+
 .cp_ipcheck .box {
-    width:33%;
+    width: 33%;
     margin: 2em auto;
     text-align: left;
     border: 1px solid white;
@@ -629,15 +633,18 @@ table.table th {
     background: #ffffff;
     float: left
 }
+
 .cp_ipcheck input[type=checkbox] {
     display: none;
 }
+
 .cp_ipcheck label:focus,
 .cp_ipcheck label:hover,
 .cp_ipcheck label:active,
 .cp_ipcheck input:checked + label {
-    color: #00aaff;/*文字部分*/
+    color: #00aaff; /*文字部分*/
 }
+
 .cp_ipcheck label:focus:before,
 .cp_ipcheck label:hover:before,
 .cp_ipcheck label:active:before,
@@ -645,6 +652,7 @@ table.table th {
     border-color: #00aaff;
     background: #ffffff;
 }
+
 .cp_ipcheck label {
     font-size: 1em;
     font-weight: bold;
@@ -660,6 +668,7 @@ table.table th {
     text-overflow: ellipsis;
     background: #ffffff;
 }
+
 .cp_ipcheck label:before {
     position: absolute;
     top: 1em;
@@ -667,9 +676,10 @@ table.table th {
     width: 10px;
     height: 10px;
     content: '';
-    border: 0.2em solid #d3d3d3;/*チェックボックスの枠*/
+    border: 0.2em solid #d3d3d3; /*チェックボックスの枠*/
 }
+
 .cp_ipcheck input:checked + label:before {
-    border-color: #00aaff;/*ちぇっく後塗りつぶす*/
+    border-color: #00aaff; /*ちぇっく後塗りつぶす*/
     background: #00aaff;
 }

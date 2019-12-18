@@ -13,8 +13,8 @@ import os
 from self_package import image_operation
 
 result_dic = {}
-json_path = os.path.abspath("./static/maindata/json/category.json")
-img_dir = os.path.abspath('./static/maindata/uplode_img')
+json_path = os.path.abspath('./static/maindata/json/category.json')
+img_dir = os.path.abspath('maindata/static/maindata/uplode_img')
 form = cgi.FildStorage()
 select_list = form.getlist('selectCategory')
 select_list = self_package.category.name_change(select_list, json_path)
@@ -28,7 +28,3 @@ for select in select_list:
             result_dic[select] = resultValue.values()
 
 self_package.image_operation.reset(img_dir)
-            
-
-
-

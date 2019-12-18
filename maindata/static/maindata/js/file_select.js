@@ -1,6 +1,5 @@
-
 // forked from _shimizu's "input type=file → canvas" http://jsdo.it/_shimizu/5KO3
-$("#uploadFile").change(function() {
+$("#uploadFile").change(function () {
 
     var file = this.files[0];
     if (!file.type.match(/^image\/(png|jpeg|gif)$/)) return;
@@ -8,12 +7,12 @@ $("#uploadFile").change(function() {
     var image = new Image();
     var reader = new FileReader();
 
-    reader.onload = function(evt) {
-        image.onload = function() {
+    reader.onload = function (evt) {
+        image.onload = function () {
 
 
-            $("#canvas").attr("width",image.width);
-            $("#canvas").attr("height",image.height);
+            $("#canvas").attr("width", image.width);
+            $("#canvas").attr("height", image.height);
 
 
             var canvas = $("#canvas");

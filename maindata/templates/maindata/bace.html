@@ -14,30 +14,30 @@
     {% block extra_css %}{% endblock %}
 </head>
 <body>
-    <div id="header">
-        <div class="inner">
-            <div class="logo">
-                Sawa
-            </div>
+<div id="header">
+    <div class="inner">
+        <div class="logo">
+            Sawa
         </div>
     </div>
-    <div class="container">
-        {% block content %}
-            {{ content }}
-        {% endblock %}
+</div>
+<div class="container">
+    {% block content %}
+        {{ content }}
+    {% endblock %}
+</div>
+<div id="footer">
+    <div class="inner">
+        <section class="gridWrapper">
+            <article class="grid">
+                <p class="logo"><a href="index.html">Sisinibora<br/><span></span></a></p>
+            </article>
+            <article class="grid col3">
+                <p>2019 Sisinibora</p>
+            </article>
+        </section>
     </div>
-    <div id="footer">
-        <div class="inner">
-            <section class="gridWrapper">
-                <article class="grid">
-                    <p class="logo"><a href="index.html">Sisinibora<br /><span></span></a></p>
-                </article>
-                <article class="grid col3">
-                    <p>2019 Sisinibora</p>
-                </article>
-            </section>
-        </div>
-    </div>
+</div>
 <script src="{% static 'maindata/css/style.css' %}"></script>
 <script src="{% static 'maindata/js/bootstrap.bundle.min.js' %}"></script>
 {% block extra_js %}{% endblock %}

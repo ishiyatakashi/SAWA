@@ -1,15 +1,19 @@
-.result{
-    display:none;
+.result {
+    display: none;
 }
-.cancel{
-    display:none;
+
+.cancel {
+    display: none;
 }
-.next{
-    display:none;
+
+.next {
+    display: none;
 }
-.camera{
-    display:inline;
+
+.camera {
+    display: inline;
 }
-.shutter{
-    display:inline;
+
+.shutter {
+    display: inline;
 }

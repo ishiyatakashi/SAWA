@@ -10,7 +10,6 @@ def top(request):
 
 
 def camera(request):
-
     return render(request, 'maindata/camera.html')
 
 
@@ -21,12 +20,14 @@ def file_select(request):
 def category(request):
     return render(request, 'maindata/category_select.html')
 
+
 def result(request):
     return render(request, 'maindata/result.html')
 
+
 def send_file(request):
     site = 'maindata/result.html'
-    #csrf対策
+    # csrf対策
     c = {}
     c.update(csrf(request))
     if request.method == 'POST':
@@ -37,4 +38,3 @@ def send_file(request):
         return HttpResponseRedirect("/")
 
     return render(request, site)
-

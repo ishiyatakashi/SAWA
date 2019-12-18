@@ -1,2 +1,0 @@
-def category():
-    return None

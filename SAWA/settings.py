@@ -118,7 +118,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#メディアファイル保存 PATH
+# メディアファイル保存 PATH
 MEDIA_ROOT = os.path.join(BASE_DIR, 'file')
-#メディアファイルアクセス PATH
+# メディアファイルアクセス PATH
 MEDIA_URL = '/file/'
