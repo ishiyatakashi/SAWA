@@ -1,0 +1,52 @@
+﻿{
+	"idol": {
+		"id": "hu01",
+		"japanese": "アイドル"
+	},
+	"baseballPrayer": {
+		"id": "hu02",
+		"japanese": "プロ野球選手"
+	},
+	"actor": {
+		"id": "hu03"
+		"japanese":"俳優"
+	},
+	"actress":{
+		"id":"hu04",
+		"japanese":"女優"
+	},
+	"musician":{
+		"id":"hu05",
+		"japanese":"ミュージシャン"
+	},
+	"youtuber":{
+		"id":"hu06",
+		"japanese":"ユーチューバー"
+	},
+	"artiste ":{
+		"id":"hu07",
+		"japanese":"アーティスト"
+	},
+	"vegetables":{
+		"id":"pl01",
+		"japanese":"野菜"
+	},
+	"fruit":{
+		"id":"pl02",
+		"japanese":"果物"
+	},
+	"animal":{
+		"id":"an01",
+		"japanese":"動物"
+	},
+	"gameLive":{
+		"id":"hu08",
+		"japanese":"ゲーム実況者"
+	},
+	"japanesePrimeMinister":{
+		"id":"hu09",
+		"japanese":"総理大臣"
+	}
+		
+}
+      
