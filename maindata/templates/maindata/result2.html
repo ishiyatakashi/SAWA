@@ -4,13 +4,13 @@
 
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'maindata/css/modal.css' %}">
+{% block extra_css %}<link rel="stylesheet" href="{% static 'maindata/css/modal.css' %}">{% endblock %}
 
 {% block content %}
 
     <div id="wrapper">
         <div class="center" style="font-size: 40px">あなたは....</div>
-        <div class="center" style="font-size: 50px"><a style="font-size: 60px">〇〇</a>っぽい<a style="font-size: 60px">〇〇</a>です
+        <div class="center" style="font-size: 50px"><a style="font-size: 60px">野菜</a>っぽい<a style="font-size: 60px">アイドル</a>です
         </div>
     </div>
 
@@ -34,22 +34,22 @@
                 <h3>あなたが選んだ「っぽい度」一覧</h3>
                 <div class="modal_box">
                     <div class="box">
-                        <label>アイドル</label><br>
-                        <label for="a_ch2">プロ野球選手・・・XX%</label><br>
-                        <label for="a_ch3">俳優</label><br>
-                        <label for="a_ch10">女優</label>
+                        <label>アイドル・・・90%</label><br>
+                        <label for="a_ch2">プロ野球選手・・・54%</label><br>
+                        <label for="a_ch3">俳優・・・78%</label><br>
+                        <label for="a_ch10">女優・・・65%</label>
                     </div>
                     <div class="box">
-                        <label for="a_ch4">ミュージシャン</label><br>
-                        <label for="a_ch5">ユーチューバー</label><br>
-                        <label for="a_ch6">アーティスト</label><br>
-                        <label for="a_ch11">野菜</label>
+                        <label for="a_ch4">ミュージシャン・・・43%</label><br>
+                        <label for="a_ch5">ユーチューバー・・・35%</label><br>
+                        <label for="a_ch6">アーティスト・・・23%</label><br>
+                        <label for="a_ch11">野菜・・・99%</label>
                     </div>
                     <div class="box">
-                        <label for="a_ch7">果物</label><br>
-                        <label for="a_ch8">動物</label><br>
-                        <label for="a_ch9">ゲーム実況者</label><br>
-                        <label for="a_ch12">平均の顔</label>
+                        <label for="a_ch7">果物・・・50%</label><br>
+                        <label for="a_ch8">動物・・・25%</label><br>
+                        <label for="a_ch9">ゲーム実況者・・・46%</label><br>
+                        <label for="a_ch12">総理大臣・・・33%</label>
                     </div>
                 </div>
                 <label class="aligncenter">
@@ -62,4 +62,6 @@
             <!--modal__inner-->
         </div>
         <!--modal-->
+    <script src="{% static 'maindata/js/modal.js' %}"></script>
+
 {% endblock content %}
