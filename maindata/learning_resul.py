@@ -16,24 +16,21 @@ def __init__(self):
     self.category_japanese_list = []
     self.sort_result_dic = []
 
-    # html文章の初期化
-    self.html = None
-    self.result_html = None
-
     # ファイルの参照パス指定
-    self.json_path = os.path.abspath('./static/maindata/json/category.json')
+
     self.img_dir = os.path.abspath('maindata/static/maindata/uplode_img')
     self.img_path = image_operation.addpath(self.img_dir)
 
 
 def select_learning(self):
+    json_path = os.path.abspath('./static/maindata/json/category.json')
     #  フィールドストレージからpostを取得しリストに格納
     form = cgi.FildStorage()
     select_list = form.getlist('selectCategory')
 
     #  カテゴリーテーブルの作成,選択されたカテゴリーIDをカテゴリーKEYに変換したリストの作成
-    select_list = self_package.category.name_change(select_list, self.json_path)
-    category_table = self_package.category.creat_category_table(self.json_path)
+    select_list = self_package.category.name_change(select_list, json_path)
+    category_table = self_package.category.creat_category_table(json_path)
     for category in category_table.items():
         self.category_key_list.append(category.keys())
 

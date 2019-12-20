@@ -6,10 +6,12 @@
 
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array, load_img
+import os
 
 
-def learning(self, model_path, img_path, category_key):
+def learning(self, img_path, category_key):
     pred_list = []
+    model_path = os.path.abspath("../static/maindata/model/.h5")
     # 学習済みモデルの読込
     model = load_model(model_path)
     # 画像の読込

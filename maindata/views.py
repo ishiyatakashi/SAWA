@@ -24,14 +24,16 @@ def category(request):
 
 
 def result(request):
-    template = loader.get_template()
-    return HttpResponse(render,)
+    template = loader.get_template('maindata/result.html')
+    return HttpResponse(render, )
+
 
 def result2(request):
     return render(request, 'maindata/result2.html')
 
+
 def send_file(request):
-    site = 'maindata/result.html'
+    site = 'maindata/category_select.html'
     # csrf対策
     c = {}
     c.update(csrf(request))
@@ -43,5 +45,3 @@ def send_file(request):
         return HttpResponseRedirect("/")
 
     return render(request, site)
-
-
