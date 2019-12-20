@@ -8,7 +8,7 @@ from keras.models import load_model
 from keras.preprocessing.image import img_to_array, load_img
 
 
-def learning(self, model_path, img_path, category_table):
+def learning(self, model_path, img_path, category_key):
     pred_list = []
     # 学習済みモデルの読込
     model = load_model(model_path)
@@ -24,7 +24,7 @@ def learning(self, model_path, img_path, category_table):
         for score in pred:
             pred_list.append(score)
     # 判定結果とカテゴリリストで辞書型を生成
-    dic = {key: val for key, val in zip(category_table, pred_list)}
+    dic = {key: val for key, val in zip(category_key, pred_list)}
     return dic
 
 # In[ ]:
