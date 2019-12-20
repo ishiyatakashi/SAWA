@@ -38,3 +38,5 @@ def send_file(request):
         return HttpResponseRedirect("/")
 
     return render(request, site)
+
+
