@@ -1,12 +1,12 @@
 {% extends "maindata/bace.html" %}
 
 {% block title %}{% endblock title %}
-
+{% load static %}
 {% block content %}
+
     <div id="wrapper">
         <section class="gridWrapper img">
-            <br><img src="../../static/maindata/imgs/noimg.jpg" class="not_image">
-
+            <br><canvas id="canvas" class="canvas" name="canvas"></canvas>
         </section>
         <form action="sendfile/" method="post" style="text-align: center" enctype="multipart/form-data">
             {% csrf_token %}
@@ -26,5 +26,6 @@
             <br><br>
         </form>
     </div>
+    <script src="{% static 'maindata/js/file_select.js' %}"></script>
     <!-- / WRAPPER -->
 {% endblock content %}

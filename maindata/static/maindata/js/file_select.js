@@ -1,28 +1,38 @@
-// forked from _shimizu's "input type=file → canvas" http://jsdo.it/_shimizu/5KO3
-$("#uploadFile").change(function () {
-
-    var file = this.files[0];
-    if (!file.type.match(/^image\/(png|jpeg|gif)$/)) return;
-
-    var image = new Image();
-    var reader = new FileReader();
-
-    reader.onload = function (evt) {
-        image.onload = function () {
-
-
-            $("#canvas").attr("width", image.width);
-            $("#canvas").attr("height", image.height);
-
-
-            var canvas = $("#canvas");
-            var ctx = canvas[0].getContext("2d");
-            ctx.drawImage(image, 0, 0); //canvasに画像を転写
-
-        }
-
-
-        image.src = evt.target.result;
+const canvas = document.getElementById("canvas");
+    let imagePath = "/file/noimg.jpg";
+    draw(canvas,imagePath);
+    function draw(canvas,imagePath){
+        console.log("draw");
+        const image = new Image();
+        image.src = imagePath;
+        console.log(image.sizes)
+        image.addEventListener("load",function (){
+            $("#canvas").attr("width",image.width);   //←これだったらおｋだった。
+	        $("#canvas").attr("height",image.height);
+            const ctx = canvas.getContext("2d");
+            ctx.drawImage(image,0, 0, image.width, image.height);
+            console.log("load!");
+        });
     }
-    reader.readAsDataURL(file);
-});
+     $("#file").change(function() {
+
+         const file = this.files[0];
+         console.log('change')
+         const image = new Image();
+         const reader = new FileReader();
+
+         reader.onload = function (evt) {
+             image.onload = function () {
+
+                 //canvas1のサイズを画像サイズに合わせて変更（引き伸ばされる）
+                 $("#canvas").attr("width", image.width);   //←これだったらおｋだった。　orz
+                 $("#canvas").attr("height", image.height);
+                 const ctx = canvas.getContext("2d");
+                 ctx.drawImage(image, 0, 0); //canvas1に画像を転写
+             }
+
+
+             image.src = evt.target.result;
+         }
+         reader.readAsDataURL(file);
+     });
