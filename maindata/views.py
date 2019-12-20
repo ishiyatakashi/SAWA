@@ -24,6 +24,8 @@ def category(request):
 def result(request):
     return render(request, 'maindata/result.html')
 
+def result2(request):
+    return render(request, 'maindata/result2.html')
 
 def send_file(request):
     site = 'maindata/result.html'

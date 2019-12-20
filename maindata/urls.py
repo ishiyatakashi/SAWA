@@ -14,6 +14,7 @@ urlpatterns = [
     path('camera/', views.camera, name='camera'),
     re_path('sendfile/', views.send_file, name='imageCR'),
     re_path('result/', views.result, name='result'),
+    re_path('result2/', views.result2, name='result2'),#ベータ版画面
 ]
 
 urlpatterns += staticfiles_urlpatterns()
