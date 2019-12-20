@@ -5,6 +5,8 @@
 import json
 from typing import List, Any
 
+category_dic = {}
+
 
 def name_change(path, change_list) -> object:
     """getパラメータをカテゴリー名に変換する:
@@ -29,18 +31,20 @@ def name_change(path, change_list) -> object:
     except FileExistsError:
         return FileExistsError
 
+
 def creat_category_table(self, path):
     """カテゴリーテーブルの作成
     　@param
        path:jsonフォルダの絶対パス
 
       @return
-       category_table:list型のカテゴリーテーブル
+       category_table:dic型のカテゴリーテーブル
     """
 
-    category_table: List[Any] = []
+    global category_dic
     with open(path, 'r', encoding='UTF-8')as f:
-        categories_dic = json.load(f)
-    for categories in self.categories_list:
-        category_table.append(categories.keys())
-    return category_table
+        new_categories_dic = json.load(f)
+    if category_dic is None or category_dic != new_categories_dic:
+        category_dic = new_categories_dic
+
+    return category_dic
