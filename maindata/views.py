@@ -1,7 +1,9 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
+from django.template import loader
 from django.template.context_processors import csrf
 from maindata import image_file_create
+from maindata import learning_resul
 
 
 def top(request):
@@ -22,7 +24,8 @@ def category(request):
 
 
 def result(request):
-    return render(request, 'maindata/result.html')
+    template = loader.get_template()
+    return HttpResponse(render,)
 
 def result2(request):
     return render(request, 'maindata/result2.html')
