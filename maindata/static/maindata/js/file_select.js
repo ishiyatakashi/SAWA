@@ -1,5 +1,5 @@
 const canvas = document.getElementById("canvas");
-    let imagePath = "/file/noimg.jpg";
+    let imagePath = "/file/openfile/noimg.jpg";
     draw(canvas,imagePath);
     function draw(canvas,imagePath){
         console.log("draw");
