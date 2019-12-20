@@ -1,25 +1,36 @@
 {% extends "maindata/bace.html" %}
 
-{% block title %}{% endblock title %}
+    {% block title %}{% endblock title %}
 
-{% block content %}
+    {% block content %}
 
-    <div id="wrapper">
-        <div class="center" style="font-size: 40px">あなたは....</div>
-        <div class="center" style="font-size: 50px"><a style="font-size: 60px">〇〇</a>っぽい<a
-                style="font-size: 60px">〇〇</a>です
-        </div>
-    </div>
+        <div id="wrapper">
+            <div class="center" style="font-size: 40px">あなたは....</div>
+            <div class="center" style="font-size: 50px"><a style="font-size: 60px">{{first}}</a>っぽい
+                <a style="font-size: 60px">{{second}}</a>です</div>
+            <div style="font-size: 35px"> </div>
+            <div class="details">
+                {{% for list in lists %}
+                <div class='box'>
+                <a style='font-size: 30px'>{key}</a>
+                <a style='font-size: 30px'>{value}</a>
+                </div>
+                {% empty %}
 
-    <!-- Twitter 共有ボタンスクリプト -->
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large"
-       data-text="あなたは〇〇っぽい？" data-lang="ja" data-show-count="false">Tweet</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                {% endfor %}
+                 }}
+            </div>
+         </div>
 
-    <!-- Facebook 共有ボタンスクリプト (保留!!!!)-->
-    <!--
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script>
-    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" style="font-size: 10px">シェア</a></div>
-    -->
-{% endblock content %}
+        <!-- Twitter 共有ボタンスクリプト -->
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large"
+           data-text="あなたは〇〇っぽい？%0わたしは{first}っぽい{second}でした。%0皆さんもやってみませんか？" data-lang="ja" data-show-count="false">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        <!-- Facebook 共有ボタンスクリプト (保留!!!!)-->
+        <!--
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script>
+        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" style="font-size: 10px">シェア</a></div>
+        -->
+    {% endblock content %}
