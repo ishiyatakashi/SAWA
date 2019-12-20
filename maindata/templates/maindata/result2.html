@@ -1,0 +1,65 @@
+{% extends "maindata/bace.html" %}
+
+{% block title %}{% endblock title %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'maindata/css/modal.css' %}">
+
+{% block content %}
+
+    <div id="wrapper">
+        <div class="center" style="font-size: 40px">あなたは....</div>
+        <div class="center" style="font-size: 50px"><a style="font-size: 60px">〇〇</a>っぽい<a style="font-size: 60px">〇〇</a>です
+        </div>
+    </div>
+
+            <div class="content">
+            <label>
+                <span class="js-modal-open btn-square">
+                    その他の結果を見る
+                    <input type="button" style="display: none">
+                </span>
+            </label>
+
+            <div class="alignright">
+                <!-- Twitter 共有ボタンスクリプト -->
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="あなたは〇〇っぽい？" data-lang="ja" data-show-count="false">Tweet</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+        <div class="modal js-modal">
+            <div class="modal__bg js-modal-close"></div>
+            <div class="modal__content">
+                <h3>あなたが選んだ「っぽい度」一覧</h3>
+                <div class="modal_box">
+                    <div class="box">
+                        <label>アイドル</label><br>
+                        <label for="a_ch2">プロ野球選手・・・XX%</label><br>
+                        <label for="a_ch3">俳優</label><br>
+                        <label for="a_ch10">女優</label>
+                    </div>
+                    <div class="box">
+                        <label for="a_ch4">ミュージシャン</label><br>
+                        <label for="a_ch5">ユーチューバー</label><br>
+                        <label for="a_ch6">アーティスト</label><br>
+                        <label for="a_ch11">野菜</label>
+                    </div>
+                    <div class="box">
+                        <label for="a_ch7">果物</label><br>
+                        <label for="a_ch8">動物</label><br>
+                        <label for="a_ch9">ゲーム実況者</label><br>
+                        <label for="a_ch12">平均の顔</label>
+                    </div>
+                </div>
+                <label class="aligncenter">
+                    <span class="js-modal-close btn-square">
+                        閉じる
+                        <input type="button" style="display: none">
+                    </span>
+                </label>
+            </div>
+            <!--modal__inner-->
+        </div>
+        <!--modal-->
+{% endblock content %}
