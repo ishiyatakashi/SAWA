@@ -18,7 +18,7 @@ def __init__(self):
 
     # ファイルの参照パス指定
 
-    self.img_dir = os.path.abspath('maindata/static/maindata/uplode_img')
+    self.img_dir = os.path.abspath('maindata/static/maindata/Uplode_image')
     self.img_path = image_operation.addpath(self.img_dir)
 
 
