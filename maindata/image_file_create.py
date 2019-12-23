@@ -5,6 +5,7 @@ import sys
 # import cv2
 from django.core.files.storage import FileSystemStorage
 from SAWA.settings import BASE_DIR
+import random
 
 sys.path.append("/usr/local/lib/python2.7/site-packages")
 
@@ -15,7 +16,7 @@ def image_create(request):
     # テンプレ文(初期値はMEDIA_ROOT)
     fileobject = FileSystemStorage()
     # ファイルの名前を指定(jpgファイル固定)
-    filename = 'request_image.jpg'
+    filename = 'request_image'+ str(random.randint(1,1000000000)) +'.jpg'
     # ファイル保存()
     fileobject.save(filename, request_file)
     # 移動元

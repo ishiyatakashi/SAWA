@@ -38,8 +38,9 @@ def send_file(request):
     c = {}
     c.update(csrf(request))
     if request.method == 'POST':
-        image_file_create.image_create(request)
-
+        None
+        if 'file' not in request.FILES:
+            return HttpResponseRedirect("/file_select")
     else:
 
         return HttpResponseRedirect("/")

@@ -8,9 +8,9 @@
     <meta name="keywords" content="">
     <title>{% block title %}SAWA{% endblock %}</title>
     <script src="{% static 'maindata/js/jquery-3.4.1.min.js' %}"></script>
-    <link rel="stylesheet" href="../../static/maindata/css/style.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="../../static/maindata/css/camera_style.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="../../static/maindata/css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static 'maindata/css/style.css' %}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static 'maindata/css/camera_style.css' %}" type="text/css" media="screen">
+    <link rel="stylesheet" href="{% static 'maindata/css/bootstrap.css' %}" type="text/css" media="screen">
     {% block extra_css %}{% endblock %}
 </head>
 <body>
