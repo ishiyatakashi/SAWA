@@ -24,8 +24,10 @@ def category(request):
 
 
 def result(request):
+    re = learning_resul
+    parse, first, second = re.Study.select_learning()
     template = loader.get_template('maindata/result.html')
-    return HttpResponse(render, )
+    return HttpResponse(render, template, {'first': first, 'second': second, 'lists': parse})
 
 
 def result2(request):
@@ -46,3 +48,7 @@ def send_file(request):
         return HttpResponseRedirect("/")
 
     return render(request, site)
+
+def quiz_mode():
+
+    return render()
