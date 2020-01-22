@@ -136,7 +136,7 @@ html {
 #wrapper {
     margin: auto;
     padding: 0;
-    width: 60%;
+    width: 100%;
     min-height: 80vh;
     position: relative;
 }
@@ -268,7 +268,7 @@ ul#topnav a:hover {
 .gridWrapper {
     clear: both;
     padding: 0 0;
-    overflow: hidden;
+    overflow: visible;
     margin: auto;
 }
 
@@ -356,8 +356,10 @@ ul#topnav a:hover {
 }
 
 .gridWrapper img {
-    max-width: 100%;
+
+    width: auto;
     height: auto;
+    margin: 0px;
 }
 
 /*************
@@ -592,7 +594,7 @@ table.table th {
 }
 */
 .img {
-    width: 300px;
+    width: 582px;
     height: auto;
     text-align: center;
 }
