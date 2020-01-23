@@ -125,11 +125,13 @@ section {
 
 body {
     height: 100%;
+    background: #ffe7e7;
 }
 
 html {
     height: 100%;
 }
+
 
 /* 全体
 ------------------------------------------------------------*/
@@ -137,8 +139,10 @@ html {
     margin: auto;
     padding: 0;
     width: 100%;
+    text-align: center;
     min-height: 80vh;
     position: relative;
+    background: #ffe7e7;
 }
 
 .inner {
@@ -152,7 +156,7 @@ html {
 *************/
 #header {
     color: #fff;
-    background: #ff5959;
+    background: #333333;
     height: 10%;
 }
 
@@ -276,9 +280,7 @@ ul#topnav a:hover {
     height: 1%;
 }
 
-.grid {
-    float: left;
-}
+
 
 .colDark,
 .colLight {
@@ -330,17 +332,6 @@ ul#topnav a:hover {
     border-style: solid;
 }
 
-.colDark a,
-.colLight a {
-    display: block;
-    color: #ccc;
-}
-
-.colDark a:hover,
-.colLight a:hover {
-    color: #fff;
-}
-
 .grid p {
     padding: 5px 10px;
 }
@@ -359,7 +350,7 @@ ul#topnav a:hover {
 
     width: auto;
     height: auto;
-    margin: 0px;
+    margin: 0;
 }
 
 /*************
@@ -408,9 +399,9 @@ h3.heading,
 
 /*
 .aligncenter {
-    float: center;
-    clear: center;
-    margin: 3px 1px 10px 10px;
+float: center;
+clear: center;
+margin: 3px 1px 10px 10px;
 }
 */
 img.frame,
@@ -473,10 +464,8 @@ table.table th {
     clear: both;
     padding: 20px 0;
     overflow: hidden;
-    background: #ff5959;
-    border-top: 1px solid #ff5959;
-    height: 10%;
-    color: #ffffff;
+    background: #333333;
+    color: #aaaaaa;
 }
 
 * html #footer {
@@ -484,77 +473,31 @@ table.table th {
 }
 
 #footer a {
-    color: #fff;
+    font-size: 30px;
+    color: aliceblue;
 }
 
-#footer a:hover {
-    color: #ff5959;
-}
 
 #footer .copyright {
     font-size: 11px;
 }
 
-
-/* PC用 */
-@media only screen and (min-width:960px) {
-
-    #wrapper,
-    .inner,
-    ul#topnav {
-        width: 940px;
-        padding: 0;
-    }
-
-    #wrapper {
-        padding-bottom: 20px;
-    }
-
-    #main {
-        float: right;
-        width: 690px;
-    }
-
-    #subpage #sub {
-        float: left;
-        width: 235px;
-        overflow: hidden;
-    }
-
-    /* グリッド */
-    .grid {
-        width: 235px;
-    }
-
-    .col2 {
-        width: 470px;
-    }
-
-    .col12 {
-        width: 2820px;
-    }
-
-    .col3 {
-        width: 705px;
-    }
-
-    #gallery .grid {
-        width: 230px;
-    }
-
-    #subpage #sub .grid {
-        width: 100%;
-        float: none;
-        padding-bottom: 30px;
-    }
-
+#footer img.image {
+    width: 40px;
+    height: 40px;
 }
 
+#footer img.twitter {
+    width: 40px;
+}
 
+#footer img.facebook {
+    width: 30px;
+}
 
 /* 追加機能 */
 .center {
-    text-align: center;
+    height: 11px;
 }
 
 .parent {
@@ -588,15 +531,17 @@ table.table th {
     border-bottom: none;
     /*線を消す*/
 }
+
 /*
 #btn-select {
-    margin: none;
+margin: none;
 }
 */
 .img {
     width: 582px;
     height: auto;
     text-align: center;
+    padding: 10px;
 }
 
 
@@ -675,3 +620,6 @@ table.table th {
     /*てぇっく後塗りつぶす*/
     background: #00aaff;
 }
+
+/*--------twetter shere button------------*/
+
