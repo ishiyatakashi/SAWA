@@ -462,10 +462,9 @@ table.table th {
 *************/
 #footer {
     clear: both;
-    padding: 20px 0;
     overflow: hidden;
     background: #333333;
-    color: #aaaaaa;
+    color: #aaa;
 }
 
 * html #footer {
@@ -473,26 +472,31 @@ table.table th {
 }
 
 #footer a {
-    font-size: 30px;
+    font-size: 40px;
     color: aliceblue;
+    padding: 0 16px;
+}
+
+#footer .p {
+    padding: 0 50px;
 }
 
 
 #footer .copyright {
     font-size: 11px;
+    padding: 0 10px;
 }
 
-#footer img.image {
-    width: 40px;
-    height: 40px;
+#footer img {
+    margin: 0 10px;
 }
 
 #footer img.twitter {
-    width: 40px;
+    width: 30px;
 }
 
 #footer img.facebook {
-    width: 30px;
+    width: 20px;
 }
 
 /* 追加機能 */
@@ -620,6 +624,4 @@ margin: none;
     /*てぇっく後塗りつぶす*/
     background: #00aaff;
 }
-
-/*--------twetter shere button------------*/
 
