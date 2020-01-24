@@ -29,7 +29,7 @@ window.onload = () => {
             };
         })
         .catch((err) => {
-            console.log(err.name + ": " + err.message);
+            alert('カメラが起動してません!!!!');
         });
 
     /**

@@ -125,20 +125,25 @@ section {
 
 body {
     height: 100%;
+    background: #ffe7e7;
 }
 
 html {
     height: 100%;
 }
 
+
 /* 全体
 ------------------------------------------------------------*/
 #wrapper {
     margin: auto;
     padding: 0;
-    width: 60%;
+    width: 100%;
+    text-align: center;
     min-height: 80vh;
     position: relative;
+    background: #ffe7e7;
+    font-family: "Sawarabi Gothic";
 }
 
 .inner {
@@ -152,7 +157,7 @@ html {
 *************/
 #header {
     color: #fff;
-    background: #ff5959;
+    background: #333333;
     height: 10%;
 }
 
@@ -165,7 +170,7 @@ html {
 }
 
 .logo a {
-    font-size: 20px;
+    font-size: 60px;
     font-weight: bold;
     line-height: 1;
     color: #fff;
@@ -268,7 +273,7 @@ ul#topnav a:hover {
 .gridWrapper {
     clear: both;
     padding: 0 0;
-    overflow: hidden;
+    overflow: visible;
     margin: auto;
 }
 
@@ -276,9 +281,7 @@ ul#topnav a:hover {
     height: 1%;
 }
 
-.grid {
-    float: left;
-}
+
 
 .colDark,
 .colLight {
@@ -330,17 +333,6 @@ ul#topnav a:hover {
     border-style: solid;
 }
 
-.colDark a,
-.colLight a {
-    display: block;
-    color: #ccc;
-}
-
-.colDark a:hover,
-.colLight a:hover {
-    color: #fff;
-}
-
 .grid p {
     padding: 5px 10px;
 }
@@ -356,8 +348,10 @@ ul#topnav a:hover {
 }
 
 .gridWrapper img {
-    max-width: 100%;
+
+    width: auto;
     height: auto;
+    margin: 0;
 }
 
 /*************
@@ -406,9 +400,9 @@ h3.heading,
 
 /*
 .aligncenter {
-    float: center;
-    clear: center;
-    margin: 3px 1px 10px 10px;
+float: center;
+clear: center;
+margin: 3px 1px 10px 10px;
 }
 */
 img.frame,
@@ -469,12 +463,9 @@ table.table th {
 *************/
 #footer {
     clear: both;
-    padding: 20px 0;
     overflow: hidden;
-    background: #ff5959;
-    border-top: 1px solid #ff5959;
-    height: 10%;
-    color: #ffffff;
+    background: #333333;
+    color: #aaa;
 }
 
 * html #footer {
@@ -482,77 +473,36 @@ table.table th {
 }
 
 #footer a {
-    color: #fff;
+    font-size: 40px;
+    color: aliceblue;
+    padding: 0 16px;
 }
 
-#footer a:hover {
-    color: #ff5959;
+#footer .p {
+    padding: 0 50px;
 }
+
 
 #footer .copyright {
     font-size: 11px;
+    padding: 0 10px;
 }
 
-
-/* PC用 */
-@media only screen and (min-width:960px) {
-
-    #wrapper,
-    .inner,
-    ul#topnav {
-        width: 940px;
-        padding: 0;
-    }
-
-    #wrapper {
-        padding-bottom: 20px;
-    }
-
-    #main {
-        float: right;
-        width: 690px;
-    }
-
-    #subpage #sub {
-        float: left;
-        width: 235px;
-        overflow: hidden;
-    }
-
-    /* グリッド */
-    .grid {
-        width: 235px;
-    }
-
-    .col2 {
-        width: 470px;
-    }
-
-    .col12 {
-        width: 2820px;
-    }
-
-    .col3 {
-        width: 705px;
-    }
-
-    #gallery .grid {
-        width: 230px;
-    }
-
-    #subpage #sub .grid {
-        width: 100%;
-        float: none;
-        padding-bottom: 30px;
-    }
-
+#footer img {
+    margin: 0 10px;
 }
 
+#footer img.twitter {
+    width: 30px;
+}
 
+#footer img.facebook {
+    width: 20px;
+}
 
 /* 追加機能 */
 .center {
-    text-align: center;
+    height: 11px;
 }
 
 .parent {
@@ -586,15 +536,17 @@ table.table th {
     border-bottom: none;
     /*線を消す*/
 }
+
 /*
 #btn-select {
-    margin: none;
+margin: none;
 }
 */
 .img {
-    width: 300px;
+    width: 582px;
     height: auto;
     text-align: center;
+    padding: 10px;
 }
 
 
@@ -672,4 +624,8 @@ table.table th {
     border-color: #00aaff;
     /*てぇっく後塗りつぶす*/
     background: #00aaff;
+}
+
+.wf-nicomoji {
+    font-family: "Nico Moji";
 }

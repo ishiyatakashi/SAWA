@@ -41,12 +41,13 @@ def send_file(request):
     c.update(csrf(request))
     if request.method == 'POST':
         None
-        if 'file' not in request.FILES:
+        if 'base64' not in request.POST:
+            print("not file")
             return HttpResponseRedirect("/file_select")
     else:
 
         return HttpResponseRedirect("/")
-
+    image_file_create.image_create(request)
     return render(request, site)
 
 def quiz_mode():
