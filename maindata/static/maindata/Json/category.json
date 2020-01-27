@@ -1,53 +1,107 @@
 ﻿{
-	"actor":{
-		"Takeru_Sato": {
+	"male_actor":{
+		"sato_takeru": {
 			"id": "ac-man-01",
 			"japanese": "佐藤健"
 		},
-		"Tori_Matuzaka": {
+		"matuzaka_tori": {
 			"id": "ac-man-02",
 			"japanese": "松坂桃李"
 		},
-		"Gen_Hosino": {
+		"hosino_gen": {
 			"id": "ac-man-03",
 			"japanese": "星野源"
 		},
-		"animal": {
+		"higaside_masahiro": {
 			"id": "an01",
-			"japanese": "動物"
+			"japanese": "東出昌大"
 		},
-		"artiste ": {
+		"kaku_kento": {
 			"id": "hu07",
-			"japanese": "アーティスト"
+			"japanese": "賀来賢人"
 		},
-		"baseballPrayer": {
+		"kamiki_ryunosuke": {
 			"id": "hu02",
-			"japanese": "プロ野球選手"
+			"japanese": "神木隆之介"
 		},
-		"fruit": {
+		"miura_haruma": {
 			"id": "pl02",
-			"japanese": "果物"
+			"japanese": "三浦春馬"
 		},
-		"gameLive": {
+		"hukisi_sota": {
 			"id": "hu08",
-			"japanese": "ゲーム実況者"
+			"japanese": "福士蒼汰"
 		},
-		"japanesePrimeMinister": {
+		"tiba_yudai": {
 			"id": "hu09",
-			"japanese": "総理大臣"
+			"japanese": "千葉雄大"
 		},
-		"musician": {
+		"mamiya_shotaro": {
 			"id": "hu05",
-			"japanese": "ミュージシャン"
+			"japanese": "間宮祥太朗"
 		},
-		"vegetables": {
+		"ayano_go": {
 			"id": "pl01",
-			"japanese": "野菜"
+			"japanese": "綾野剛"
 		},
-		"youtuber": {
+		"oguri_syun": {
 			"id": "hu06",
-				"japanese":"ユーチューバー"
-			}
+			"japanese":"小栗旬"
+			},
+		"sakai_masato": {
+			"id": "",
+			"japanese":"堺雅人"
+		},
+		"nisijima_hidetosi": {
+			"id": "",
+			"japanese":"西島秀俊"
+		},
+		"tanaka_kei": {
+			"id": "",
+			"japanese":"田中圭"
+		},
+		"sugino_yosuke": {
+			"id": "",
+			"japanese":"杉野遥亮"
+		}
+	},
+	"Female_actor": {
+		"kitagawa_keiko": {
+			"id": "",
+			"japanese":"北川景子"
+		},
+		"inoue_mao": {
+			"id": "",
+			"japanese":"井上真央"
+		},
+		"toda_erika": {
+			"id": "",
+			"japanese":"戸田恵梨香"
+		},
+		"arimura_kasumi": {
+			"id": "",
+			"japanese":"有村架純"
+		},
+		"kamisiraisi_mone": {
+			"id": "",
+			"japanese":"上白石萌音"
+		},
+		"kamisiraisi_moka": {
+			"id": "",
+			"japanese":"上白石萌歌"
+		},
+		"sugisaki_hana": {
+			"id": "",
+			"japanese":"杉咲花"
+		},
+		"aragaki_yui": {
+			"id": "",
+			"japanese":"新垣結衣"
+		},
+		"honda_tubasa": {
+			"id": "",
+			"japanese":"本田翼"
+		}
 	}
 }
       
