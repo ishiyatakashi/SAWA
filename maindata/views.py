@@ -35,19 +35,18 @@ def result2(request):
 
 
 def send_file(request):
-    site = 'maindata/category_select.html'
+    site = 'maindata/result2.html'
     # csrf対策
     c = {}
     c.update(csrf(request))
     if request.method == 'POST':
-        None
         if 'base64' not in request.POST:
             print("not file")
             return HttpResponseRedirect("/file_select")
+        imagepass = image_file_create.image_create(request)
     else:
-
         return HttpResponseRedirect("/")
-    image_file_create.image_create(request)
+
     return render(request, site)
 
 
