@@ -50,6 +50,5 @@ def send_file(request):
     image_file_create.image_create(request)
     return render(request, site)
 
-def quiz_mode():
 
-    return render()
+def post(request):

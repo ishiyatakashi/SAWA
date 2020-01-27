@@ -1,107 +1,107 @@
 ﻿{
-	"male_actor":{
-		"sato_takeru": {
-			"id": "ac-man-01",
-			"japanese": "佐藤健"
-		},
-		"matuzaka_tori": {
-			"id": "ac-man-02",
-			"japanese": "松坂桃李"
-		},
-		"hosino_gen": {
-			"id": "ac-man-03",
-			"japanese": "星野源"
-		},
-		"higaside_masahiro": {
-			"id": "an01",
-			"japanese": "東出昌大"
-		},
-		"kaku_kento": {
-			"id": "hu07",
-			"japanese": "賀来賢人"
-		},
-		"kamiki_ryunosuke": {
-			"id": "hu02",
-			"japanese": "神木隆之介"
-		},
-		"miura_haruma": {
-			"id": "pl02",
-			"japanese": "三浦春馬"
-		},
-		"hukisi_sota": {
-			"id": "hu08",
-			"japanese": "福士蒼汰"
-		},
-		"tiba_yudai": {
-			"id": "hu09",
-			"japanese": "千葉雄大"
-		},
-		"mamiya_shotaro": {
-			"id": "hu05",
-			"japanese": "間宮祥太朗"
-		},
-		"ayano_go": {
-			"id": "pl01",
-			"japanese": "綾野剛"
-		},
-		"oguri_syun": {
-			"id": "hu06",
-			"japanese":"小栗旬"
-			},
-		"sakai_masato": {
-			"id": "",
-			"japanese":"堺雅人"
-		},
-		"nisijima_hidetosi": {
-			"id": "",
-			"japanese":"西島秀俊"
-		},
-		"tanaka_kei": {
-			"id": "",
-			"japanese":"田中圭"
-		},
-		"sugino_yosuke": {
-			"id": "",
-			"japanese":"杉野遥亮"
-		}
-	},
-	"Female_actor": {
-		"kitagawa_keiko": {
-			"id": "",
-			"japanese":"北川景子"
-		},
-		"inoue_mao": {
-			"id": "",
-			"japanese":"井上真央"
-		},
-		"toda_erika": {
-			"id": "",
-			"japanese":"戸田恵梨香"
-		},
-		"arimura_kasumi": {
-			"id": "",
-			"japanese":"有村架純"
-		},
-		"kamisiraisi_mone": {
-			"id": "",
-			"japanese":"上白石萌音"
-		},
-		"kamisiraisi_moka": {
-			"id": "",
-			"japanese":"上白石萌歌"
-		},
-		"sugisaki_hana": {
-			"id": "",
-			"japanese":"杉咲花"
-		},
-		"aragaki_yui": {
-			"id": "",
-			"japanese":"新垣結衣"
-		},
-		"honda_tubasa": {
-			"id": "",
-			"japanese":"本田翼"
-		}
-	}
+  "male_actor": {
+    "sato_takeru": {
+      "id": "ac-man-01",
+      "japanese": "佐藤健"
+    },
+    "matuzaka_tori": {
+      "id": "ac-man-02",
+      "japanese": "松坂桃李"
+    },
+    "hosino_gen": {
+      "id": "ac-man-03",
+      "japanese": "星野源"
+    },
+    "higaside_masahiro": {
+      "id": "an01",
+      "japanese": "東出昌大"
+    },
+    "kaku_kento": {
+      "id": "hu07",
+      "japanese": "賀来賢人"
+    },
+    "kamiki_ryunosuke": {
+      "id": "hu02",
+      "japanese": "神木隆之介"
+    },
+    "miura_haruma": {
+      "id": "pl02",
+      "japanese": "三浦春馬"
+    },
+    "hukisi_sota": {
+      "id": "hu08",
+      "japanese": "福士蒼汰"
+    },
+    "tiba_yudai": {
+      "id": "hu09",
+      "japanese": "千葉雄大"
+    },
+    "mamiya_shotaro": {
+      "id": "hu05",
+      "japanese": "間宮祥太朗"
+    },
+    "ayano_go": {
+      "id": "pl01",
+      "japanese": "綾野剛"
+    },
+    "oguri_syun": {
+      "id": "hu06",
+      "japanese": "小栗旬"
+    },
+    "sakai_masato": {
+      "id": "",
+      "japanese": "堺雅人"
+    },
+    "nisijima_hidetosi": {
+      "id": "",
+      "japanese": "西島秀俊"
+    },
+    "tanaka_kei": {
+      "id": "",
+      "japanese": "田中圭"
+    },
+    "sugino_yosuke": {
+      "id": "",
+      "japanese": "杉野遥亮"
+    }
+  },
+  "Female_actor": {
+    "kitagawa_keiko": {
+      "id": "",
+      "japanese": "北川景子"
+    },
+    "inoue_mao": {
+      "id": "",
+      "japanese": "井上真央"
+    },
+    "toda_erika": {
+      "id": "",
+      "japanese": "戸田恵梨香"
+    },
+    "arimura_kasumi": {
+      "id": "",
+      "japanese": "有村架純"
+    },
+    "kamisiraisi_mone": {
+      "id": "",
+      "japanese": "上白石萌音"
+    },
+    "kamisiraisi_moka": {
+      "id": "",
+      "japanese": "上白石萌歌"
+    },
+    "sugisaki_hana": {
+      "id": "",
+      "japanese": "杉咲花"
+    },
+    "aragaki_yui": {
+      "id": "",
+      "japanese": "新垣結衣"
+    },
+    "honda_tubasa": {
+      "id": "",
+      "japanese": "本田翼"
+    }
+  }
 }
       

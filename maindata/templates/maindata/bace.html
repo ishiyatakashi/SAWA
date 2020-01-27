@@ -16,51 +16,53 @@
     {% block extra_css %}{% endblock %}
 </head>
 <body>
-    <div id="header">
-        <div class="inner">
-            <div class="logo">
-                <a>SAWA</a>
-            </div>
-        </div>
-    </div>
-
-    {% block content %}
-        {{ content }}
-    {% endblock %}
-
-    <div id="footer">
+<div id="header">
+    <div class="inner">
         <div class="logo">
-            <a>SAWA</a><br />
+            <a>SAWA</a>
         </div>
-        <label>
-            <form action="https://twitter.com/share?ref_src=twsrc%5Etfw" method="get">
-                <img src="{% static 'maindata/imgs/Twitter_Logo_WhiteOnImage.png' %}" class="twitter" alt="*">
-                <input type="submit" style="display: none" name="file_select" class="twitter-share-button" data-size="large" data-text="あなたは〇〇っぽい？" data-lang="ja" data-show-count="false">
-            </form>
-        </label>
-        <!--
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        -->
-
-
-        <label>
-            <form action="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" method="get">
-                <img src="{% static 'maindata/imgs/f_logo_RGB-White_1024.png' %}" class="facebook" alt="*">
-                <input type="submit" style="display: none" name="file_select">
-            </form>
-        </label>
-
-        <!--
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script>
-        <div class="fb-share-button" data- data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" style="font-size: px">
-        </a></div>
-        -->
-
-        <p class="copyright">
-            ©2019 Sisinibora
-        </p>
     </div>
+</div>
+
+{% block content %}
+    {{ content }}
+{% endblock %}
+
+<div id="footer">
+    <div class="logo">
+        <a>SAWA</a><br/>
+    </div>
+    <label>
+        <form action="https://twitter.com/share?ref_src=twsrc%5Etfw" method="get">
+            <img src="{% static 'maindata/imgs/Twitter_Logo_WhiteOnImage.png' %}" class="twitter" alt="*">
+            <input type="submit" style="display: none" name="file_select" class="twitter-share-button" data-size="large"
+                   data-text="あなたは〇〇っぽい？" data-lang="ja" data-show-count="false">
+        </form>
+    </label>
+    <!--
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    -->
+
+
+    <label>
+        <form action="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+              method="get">
+            <img src="{% static 'maindata/imgs/f_logo_RGB-White_1024.png' %}" class="facebook" alt="*">
+            <input type="submit" style="display: none" name="file_select">
+        </form>
+    </label>
+
+    <!--
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script>
+    <div class="fb-share-button" data- data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" style="font-size: px">
+    </a></div>
+    -->
+
+    <p class="copyright">
+        ©2019 Sisinibora
+    </p>
+</div>
 <script src="{% static 'maindata/css/style.css' %}"></script>
 <script src="{% static 'maindata/js/bootstrap.bundle.min.js' %}"></script>
 {% block extra_js %}{% endblock %}

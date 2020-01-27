@@ -33,7 +33,7 @@
     transform: translate(-50%, -50%);
     width: 70%;
     height: 80%;
-    border: solid#4500ff;
+    border: solid #4500ff;
 }
 
 .modal_box {
@@ -42,8 +42,8 @@
 
 }
 
-.modal_box .box{
-    width:33%;
+.modal_box .box {
+    width: 33%;
     margin: 2em auto;
     text-align: left;
     border: 1px solid white;
