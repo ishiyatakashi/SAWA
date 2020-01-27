@@ -1,9 +1,10 @@
-{% extends "maindata/bace.html" %}
+{% extends "maindata/category_select.html" %}
 
 {% block title %}{% endblock title %}
-{% load static %}
-{% block content %}
 
+{% load static %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'maindata/css/modal.css' %}">{% endblock %}
+{% block main %}
     <div id="wrapper">
         <section class="gridWrapper img">
             <br><canvas id="canvas" class="canvas" name="canvas"></canvas>
@@ -18,14 +19,26 @@
                 </span>
             </label>
             <label>
-                <span class="btn btn-secondary">
+                <span class="js-modal-open btn btn-secondary">
                     決定
-                    <input id="submit-button" type="submit" style="display: none">
+                    <input type="button" style="display: none">
                 </span>
             </label>
-            <br><br>
+
+            <div class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+{% endblock main %}
+                    <!-- category_select.html --->
+{% block sub %}
+                </div>
+            </div>
         </form>
     </div>
-    <script src="{% static 'maindata/js/file_select.js' %}"></script>
+    {% block extra_js %}
+        <script src="{% static 'maindata/js/file_select.js' %}"></script>
+        <script src="{% static 'maindata/js/modal.js' %}"></script>
+    {% endblock %}
+
     <!-- / WRAPPER -->
-{% endblock content %}
+{% endblock sub %}

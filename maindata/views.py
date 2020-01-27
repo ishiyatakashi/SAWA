@@ -35,7 +35,7 @@ def result2(request):
 
 
 def send_file(request):
-    site = 'maindata/category_select.html'
+    site = 'maindata/result2.html'
     # csrf対策
     c = {}
     c.update(csrf(request))

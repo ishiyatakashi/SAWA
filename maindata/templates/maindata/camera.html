@@ -1,16 +1,18 @@
-{% extends "maindata/bace.html" %}
+{% extends "maindata/category_select.html" %}
 
 {% block title %}{% endblock title %}
 {% load static %}
     <script src="{% static 'maindata/js/webcam.js' %}"></script>
-{% block content %}
+{% load static %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'maindata/css/modal.css' %}">{% endblock %}
+{% block main %}
     <div id="wrapper">
         <section class="gridWrapper img">
             <br>
             <video id="camera" width="336" height="336" class="camera"></video>
             <canvas id="picture" width="336" height="336" class="result"></canvas>
         </section>
-        <form action="category/" method="post" style="text-align: center" name="camera">
+        <form action="result2/" method="post" style="text-align: center" name="camera">
             {% csrf_token %}
             <div id="cancel" class="cancel">
                 <label>
@@ -30,17 +32,23 @@
                     </span>
                 </label>
             </div>
-            <div class="next" id="next">
-                <label>
-                    <span class="btn btn-secondary">
-                        決定
-                        <input id="submit-button next" type="submit" style="display: none" class="next">
-                    </span>
-                </label>
+            <label>
+                <span class="js-modal-open btn btn-secondary">
+                    決定
+                    <input type="button" style="display: none">
+                </span>
+            </label>
+
+            <div class="modal js-modal">
+                <div class="modal__bg js-modal-close"></div>
+                <div class="modal__content">
+{% endblock main %}
+                    <!-- category_select.html --->
+{% block sub %}
+                </div>
             </div>
-            <br><br>
         </form>
         <script src="../../static/maindata/js/webcam.js"></script>
+        <script src="{% static 'maindata/js/modal.js' %}"></script>
     </div>
-
-{% endblock content %}
+{% endblock sub %}

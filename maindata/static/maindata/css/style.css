@@ -143,7 +143,7 @@ html {
     min-height: 80vh;
     position: relative;
     background: #ffe7e7;
-    font-family: "Sawarabi Gothic";
+    font-family: "Sawarabi Gothic", serif;
 }
 
 .inner {
@@ -567,9 +567,9 @@ margin: none;
     width: 33%;
     margin: 2em auto;
     text-align: left;
-    border: 1px solid white;
+    border: 1px solid #ffe7e7;
     border-radius: 3px;
-    background: #ffffff;
+    background: #ffe7e7;
     float: left
 }
 
@@ -590,7 +590,7 @@ margin: none;
 .cp_ipcheck label:active:before,
 .cp_ipcheck input:checked + label:before {
     border-color: #00aaff;
-    background: #ffffff;
+    background: #ffe7e7;
 }
 
 .cp_ipcheck label {
@@ -606,7 +606,7 @@ margin: none;
     transition: all 0.15s ease;
     white-space: nowrap;
     text-overflow: ellipsis;
-    background: #ffffff;
+    background: #ffe7e7;
 }
 
 .cp_ipcheck label:before {
@@ -627,5 +627,5 @@ margin: none;
 }
 
 .wf-nicomoji {
-    font-family: "Nico Moji";
+    font-family: "Nico Moji", serif;
 }

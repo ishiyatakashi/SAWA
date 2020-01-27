@@ -14,7 +14,7 @@ urlpatterns = [
     path('camera/', views.camera, name='camera'),
     path('file_select/sendfile/', views.send_file, name='imageCR'),
     path('result/', views.result, name='result'),
-    path('camera/category/result2/', views.result2, name='result2'),#ベータ版画面
+    path('camera/result2/', views.result2, name='result2'),#ベータ版画面
     path('file_select/sendfile/result2/', views.result2, name='result2'),#ベータ版画面,
     path('quiz_mode/', views.quiz_mode, name='quiz_mode')
 

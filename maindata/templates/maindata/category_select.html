@@ -1,52 +1,38 @@
 {% extends "maindata/bace.html" %}
 
 {% block title %}{% endblock title %}
-
 {% block content %}
-
-    <div id="wrapper">
-        <div class="center" style="font-size: 40px">カテゴリ選択</div>
-        <form action="result2/" class="center" method="post" name="selectCategory">
-            {% csrf_token %}
-            <div class="cp_ipcheck">
-                <div class="box">
-                    <input type="checkbox" id="a_ch1" value="hu01" checked="checked"/>
-                    <label for="a_ch1">アイドル</label>
-                    <input type="checkbox" id="a_ch2" value="hu02"  checked="checked"/>
-                    <label for="a_ch2">プロ野球選手</label>
-                    <input type="checkbox" id="a_ch3" value="hu03" checked="checked"/>
-                    <label for="a_ch3">俳優</label>
-                    <input type="checkbox" id="a_ch10" value="hu04" checked="checked"/>
-                    <label for="a_ch10">女優</label>
+    {% block main %}
+        {{ main }}
+    {% endblock main%}
+    <div class="modal-content">
+            <div class="wf-nicomoji"><h3>カテゴリせんたく</h3></div>
+            <form action="sendfile/" method="post" style="text-align: center" enctype="multipart/form-data" onsubmit= "return checkPhase()" name="form">
+            <!--<form action="result2/" class="center" method="post" name="selectCategory">-->
+                {% csrf_token %}
+                <div class="cp_ipcheck">
+                    <div class="box">
+                        <input type="checkbox" name="cs[]" id="a_ch1" value="hu01" checked="checked"/>
+                        <label for="a_ch1">女優</label>
+                        <input type="checkbox" name="cs[]" id="a_ch2" value="hu02"  checked="checked"/>
+                        <label for="a_ch2">俳優</label>
+                    </div>
                 </div>
-                <div class="box">
-                    <input type="checkbox" id="a_ch4" value="hu05" checked="checked"/>
-                    <label for="a_ch4">ミュージシャン</label>
-                    <input type="checkbox" id="a_ch5" value="hu06" checked="checked"/>
-                    <label for="a_ch5">ユーチューバー</label>
-                    <input type="checkbox" id="a_ch6" value="hu07" checked="checked"/>
-                    <label for="a_ch6">アーティスト</label>
-                    <input type="checkbox" id="a_ch11" value="pl01" checked="checked"/>
-                    <label for="a_ch11">野菜</label>
-                </div>
-                <div class="box">
-                    <input type="checkbox" id="a_ch7" value="pl02" checked="checked"/>
-                    <label for="a_ch7">果物</label>
-                    <input type="checkbox" id="a_ch8" value="an01" checked="checked"/>
-                    <label for="a_ch8">動物</label>
-                    <input type="checkbox" id="a_ch9" value="hu08" checked="checked"/>
-                    <label for="a_ch9">ゲーム実況者</label>
-                    <input type="checkbox" id="a_ch12" value="hu09" checked="checked"/>
-                    <label for="a_ch12">総理大臣</label>
-                </div>
-            </div>
-            <label>
-                <span class="btn btn-secondary">
-                    決定
-                    <input id="submit-button" type="submit" style="display: none">
-                </span>
-            </label>
-        </form>
-    <br><br><br>
+                <label class="aligncenter">
+                    <span class="js-modal-close btn btn-primary">
+                        閉じる
+                        <input type="button" style="display: none">
+                    </span>
+                </label>
+                <label class="left">
+                    <span class="btn btn-secondary">
+                        決定
+                        <input id="submit-button" type="submit" style="display: none">
+                    </span>
+                </label>
+            </form>
     </div>
+    {% block sub %}
+        {{ sub }}
+    {% endblock sub %}
 {% endblock content %}
