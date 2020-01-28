@@ -96,7 +96,7 @@ q:after {
 
 blockquote,
 q {
-    quotes: """";
+    quotes: "" "";
 }
 
 a img {
@@ -280,7 +280,6 @@ ul#topnav a:hover {
 * html .gridWrapper {
     height: 1%;
 }
-
 
 
 .colDark,
@@ -548,7 +547,6 @@ margin: none;
     text-align: center;
     padding: 10px;
 }
-
 
 
 /*チェックボックス*/

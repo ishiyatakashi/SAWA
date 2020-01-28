@@ -51,6 +51,5 @@ def send_file(request):
 
     return render(request, site)
 
-def quiz_mode():
 
-    return render()
+def post(request):

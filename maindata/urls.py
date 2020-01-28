@@ -13,10 +13,10 @@ urlpatterns = [
     path('camera/category/', views.category, name='category'),
     path('camera/', views.camera, name='camera'),
     path('file_select/sendfile/', views.send_file, name='imageCR'),
+    path('post/', views.post, name='post'),
     path('result/', views.result, name='result'),
-    path('camera/result2/', views.result2, name='result2'),#ベータ版画面
-    path('file_select/sendfile/result2/', views.result2, name='result2'),#ベータ版画面,
-    path('quiz_mode/', views.quiz_mode, name='quiz_mode')
+    path('camera/category/result2/', views.result2, name='result2'),  # ベータ版画面
+    path('file_select/sendfile/result2/', views.result2, name='result2'),  # ベータ版画面,
 
 ]
 

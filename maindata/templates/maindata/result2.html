@@ -4,13 +4,16 @@
 
 {% load static %}
 
-{% block extra_css %}<link rel="stylesheet" href="{% static 'maindata/css/modal.css' %}">{% endblock %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'maindata/css/modal.css' %}">{% endblock %}
 
 {% block content %}
 
     <div id="wrapper">
         <div class="center" style="font-size: 40px">あなたは....</div>
-        <div class="center" style="font-size: 50px"><a style="font-size: 60px">野菜</a>っぽい<a style="font-size: 60px">アイドル</a>です</div>
+        <div class="center" style="font-size: 50px"><a style="font-size: 60px">野菜</a>っぽい<a
+                style="font-size: 60px">アイドル</a>です
+        </div>
         <div class="content" style="text-align: center">
             <label>
                 <span class="js-modal-open btn-square">
@@ -19,47 +22,48 @@
                 </span>
             </label>
         </div>
-            <div class="alignright">
-                <!-- Twitter 共有ボタンスクリプト -->
-                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="あなたは〇〇っぽい？" data-lang="ja" data-show-count="false">Tweet</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
+        <div class="alignright">
+            <!-- Twitter 共有ボタンスクリプト -->
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large"
+               data-text="あなたは〇〇っぽい？" data-lang="ja" data-show-count="false">Tweet</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
-        <div class="modal js-modal">
-            <div class="modal__bg js-modal-close"></div>
-            <div class="modal__content">
-                <h3>あなたが選んだ「っぽい度」一覧</h3>
-                <div class="modal_box">
-                    <div class="box">
-                        <label>アイドル・・・90%</label><br>
-                        <label for="a_ch2">プロ野球選手・・・54%</label><br>
-                        <label for="a_ch3">俳優・・・78%</label><br>
-                        <label for="a_ch10">女優・・・65%</label>
-                    </div>
-                    <div class="box">
-                        <label for="a_ch4">ミュージシャン・・・43%</label><br>
-                        <label for="a_ch5">ユーチューバー・・・35%</label><br>
-                        <label for="a_ch6">アーティスト・・・23%</label><br>
-                        <label for="a_ch11">野菜・・・99%</label>
-                    </div>
-                    <div class="box">
-                        <label for="a_ch7">果物・・・50%</label><br>
-                        <label for="a_ch8">動物・・・25%</label><br>
-                        <label for="a_ch9">ゲーム実況者・・・46%</label><br>
-                        <label for="a_ch12">総理大臣・・・33%</label>
-                    </div>
+    </div>
+    <div class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+            <h3>あなたが選んだ「っぽい度」一覧</h3>
+            <div class="modal_box">
+                <div class="box">
+                    <label>アイドル・・・90%</label><br>
+                    <label for="a_ch2">プロ野球選手・・・54%</label><br>
+                    <label for="a_ch3">俳優・・・78%</label><br>
+                    <label for="a_ch10">女優・・・65%</label>
                 </div>
-                <label class="aligncenter">
+                <div class="box">
+                    <label for="a_ch4">ミュージシャン・・・43%</label><br>
+                    <label for="a_ch5">ユーチューバー・・・35%</label><br>
+                    <label for="a_ch6">アーティスト・・・23%</label><br>
+                    <label for="a_ch11">野菜・・・99%</label>
+                </div>
+                <div class="box">
+                    <label for="a_ch7">果物・・・50%</label><br>
+                    <label for="a_ch8">動物・・・25%</label><br>
+                    <label for="a_ch9">ゲーム実況者・・・46%</label><br>
+                    <label for="a_ch12">総理大臣・・・33%</label>
+                </div>
+            </div>
+            <label class="aligncenter">
                     <span class="js-modal-close btn-square">
                         閉じる
                         <input type="button" style="display: none">
                     </span>
-                </label>
-            </div>
-            <!--modal__inner-->
+            </label>
         </div>
+        <!--modal__inner-->
+    </div>
     <br><br><br><br><br><br><br><br>
-        <!--modal-->
+    <!--modal-->
     <script src="{% static 'maindata/js/modal.js' %}"></script>
 
 {% endblock content %}
