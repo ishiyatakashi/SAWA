@@ -1,10 +1,33 @@
+let canvas = document.getElementById("picture");
+let base64 = null
+function create_canvas64() {
+    let base64 = canvas.toDataURL('image/jpeg');
+    make_hiddendata('base64', base64,'camera');
+    document.form.submit();
+}
+
+function make_hiddendata(name, value, formname) {
+        const q = document.createElement('input');
+        q.type = 'hidden';
+        q.name = name;
+        q.value = value;
+        if (formname) {
+            if (document.forms[formname] === undefined) {
+                console.error("ERROR: form " + formname + " is not exists.");
+            }
+            document.forms[formname].appendChild(q);
+        } else {
+            document.forms[0].appendChild(q);
+        }
+    }
+
 window.onload = () => {
     const video = document.querySelector("#camera");
     const canvas = document.querySelector("#picture");
-    var camera = document.getElementById('camera');
-    var result = document.getElementById('picture');
-    var cancel = document.getElementById('cancel');
-    var shutter = document.getElementById('shutter');
+    const camera = document.getElementById('camera');
+    const result = document.getElementById('picture');
+    const cancel = document.getElementById('cancel');
+    const shutter = document.getElementById('shutter');
     var next = document.getElementById('next');
 
     /** カメラ設定 */
@@ -45,11 +68,13 @@ window.onload = () => {
         // canvasに画像を貼り付ける
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
+        base64 = canvas.toDataURL('image/jpeg');
         camera.style.display = 'none';
         shutter.style.display = 'none';
         result.style.display = 'inline';
         cancel.style.display = 'inline';
         next.style.display = 'inline';
+
     });
     /**
      * キャンセル
@@ -62,7 +87,4 @@ window.onload = () => {
         next.style.display = 'none';
     });
 
-    document.querySelector("#next").addEventListener("click", () => {
-
-    });
 };
