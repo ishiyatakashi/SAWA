@@ -35,10 +35,12 @@ def result2(request):
 
 
 def send_file(request):
-    site = 'maindata/result2.html'
+    site = 'maindata/result.html'
     # csrf対策
     c = {}
     c.update(csrf(request))
+    print(request.POST)
+    print("AAAAAAA")
     if request.method == 'POST':
         if 'base64' not in request.POST:
             print("not file")
