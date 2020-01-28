@@ -17,7 +17,7 @@ def image_create(request):
     # ファイルの名前を作成
     filename = 'request_image' + str(random.randint(1, 1000000000)) + '.jpg'
     # ファイルをバイナリから作る
-    binary = base64.b64decode(binary_image.split(',')[1])
+    binary = base64.b64decode(binary_image.splt(',')[1])
     img = Image.open(BytesIO(binary))
     # 保存場所の
     imgpass = BASE_DIR + '/maindata/static/maindata/Upload_image/' + filename
@@ -25,3 +25,7 @@ def image_create(request):
     img.save(imgpass)
 
     return imgpass
+
+
+def list_create(request):
+    return request

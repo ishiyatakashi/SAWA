@@ -3,7 +3,6 @@ let canvas = document.getElementById("canvas");
 let imagePath = "/file/openfile/noimg.jpg";
 draw(canvas, imagePath);
 let file = null;
-let blob = null;
 
 function draw(canvas, imagePath) {
     console.log("draw");
@@ -11,7 +10,7 @@ function draw(canvas, imagePath) {
     image.src = imagePath;
     console.log(image.sizes);
     image.addEventListener("load", function () {
-        canvas.width = image.width;   //←これだったらおｋだった。
+        canvas.width = image.width;
         canvas.height = image.height;
         const ctx = canvas.getContext("2d");
         ctx.drawImage(image, 0, 0, image.width, image.height);
@@ -29,22 +28,22 @@ $("#file").change(function () {
     reader.onload = function (evt) {
         image.onload = function () {
             var ctx = canvas.getContext('2d');
-            canvas.width = image.width;   //←これだったらおｋだった。
+            canvas.width = image.width;
             canvas.height = image.height;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             if (image.width > 582) {
-                //canvas1のサイズを画像サイズに合わせて変更（引き伸ばされる）
+                //canvasのサイズを画像サイズに合わせて変更（引き伸ばされる）
                 const wari = 582 / image.width;
                 const yoko = image.height * wari;
-                canvas.width = 582;   //←これだったらおｋだった。
+                canvas.width = 582;
                 canvas.height = yoko;
                 ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, 582, yoko); //canvas1に画像を転写
             } else {
-                //canvas1のサイズを画像サイズに合わせて変更（引き伸ばされる）
-                ctx.drawImage(image, 0, 0); //canvas1に画像を転写
+                //canvasのサイズを画像サイズに合わせて変更（引き伸ばされる）
+                ctx.drawImage(image, 0, 0); //canvasに画像を転写
             }
             let base64 = canvas.toDataURL('image/jpeg');
-            make_hidden('base64', base64, 'form');
+            make_hidden('base64', base64, 'camera');
         };
         image.src = evt.target.result;
     };
