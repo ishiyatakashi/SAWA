@@ -5,21 +5,19 @@
 {% block content %}
 
     <div id="wrapper">
-        <div class="center" style="font-size: 40px">あなたは....</div>
-        <div class="center" style="font-size: 50px"><a style="font-size: 60px">{{ first }}</a>っぽい
-            <a style="font-size: 60px">{{ second }}</a>です
+        <div class="text-center" style="font-size: 40px">あなたは....</div>
+        <div class="tect-center" style="font-size: 50px"><a style="font-size: 60px">{{ first }}</a>っぽいです。
         </div>
-        <div style="font-size: 35px"></div>
         <div class="details">
             {{% for list in lists %}
-            <div class='box'>
-                <a style='font-size: 30px'>{key}</a>
-                <a style='font-size: 30px'>{value}</a>
-            </div>
-        {% empty %}
-
+                <div class='box'>
+                    <a style='font-size: 30px'>{{ key }}</a>
+                    <a style='font-size: 30px'>{{ value }}</a>
+                </div>
+                {% empty %}
+                    the list is empty.
         {% endfor %}
-            }}
+            }
         </div>
     </div>
 
