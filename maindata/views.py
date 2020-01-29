@@ -51,5 +51,3 @@ def send_file(request):
 
     return render(request, site)
 
-
-def post(request):

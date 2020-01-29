@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'maindata',
-    'test1',
     'bootstrap4',
 ]
 
@@ -54,7 +53,7 @@ ROOT_URLCONF = 'SAWA.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'maindata/html_templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
