@@ -57,7 +57,7 @@ function checkPhase() {
     }
     document.form.submit();
 }
-
+//formnameに対して画像のbase64データ(value)をnameという名前で埋め込む
 function make_hidden(name, value, formname) {
     const q = document.createElement('input');
     q.type = 'hidden';
