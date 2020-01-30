@@ -23,12 +23,10 @@ class Study:
         self.img_dir = os.path.abspath('maindata/static/maindata/Upload_image')
         self.img_path = image_operation.addpath(self.img_dir)
 
-    def select_learning(self) -> object:
-        json_path = os.path.abspath('maindata/static/maindata/Json/category.json')
+    def select_learning(self, post_dic, img_path) -> object:
 
-        # フィールドストレージからpostを取得しリストに格納
-        form = cgi.FildStorage()
-        select_list = form.getlist('selectCategory')
+        for i in post_dic.keys():
+            json_path = os.path.abspath('maindata/static/maindata/category_json/'+i+'.json')
 
         #  カテゴリーテーブルの作成,選択されたカテゴリーIDをカテゴリーKEYに変換したリストの作成
         select_list = self_package.category.name_change(select_list, json_path)
