@@ -5,8 +5,8 @@
 {% block content %}
 
     <div id="wrapper">
-        <div class="text-center" style="font-size: 40px">あなたは....</div>
-        <div class="tect-center" style="font-size: 50px"><a style="font-size: 60px">{{ first }}</a>っぽいです。
+        <div class="" style="font-size: 40px">あなたは....</div>
+        <div class="" style="font-size: 50px"><a style="font-size: 60px">{{ first }}</a>っぽいです。
         </div>
         <div class="details">
             {{% for list in lists %}
@@ -22,10 +22,14 @@
     </div>
 
     <!-- Twitter 共有ボタンスクリプト -->
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large"
-       data-text="あなたは〇〇っぽい？%0わたしは{{ first }}っぽい{{ second }}でした。%0皆さんもやってみませんか？" data-lang="ja" data-show-count="false">Tweet</a>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+    <div class="col-12">
+        <div class="col-7 float-left"></div>
+        <div class="col-2 float-left">
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large"
+               data-text="あなたは〇〇っぽい？%0わたしは{{ first }}っぽいです。%0皆さんもやってみませんか？" data-lang="ja" data-show-count="false">Tweet</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
     <!-- Facebook 共有ボタンスクリプト (保留!!!!)-->
     <!--
     <div id="fb-root"></div>
