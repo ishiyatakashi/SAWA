@@ -43,7 +43,7 @@ $("#file").change(function () {
                 ctx.drawImage(image, 0, 0); //canvasに画像を転写
             }
             let base64 = canvas.toDataURL('image/jpeg');
-            make_hidden('base64', base64, 'camera');
+            make_hidden('base64', base64, 'jpeg');
         };
         image.src = evt.target.result;
     };
