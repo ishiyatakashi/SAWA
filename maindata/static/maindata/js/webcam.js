@@ -1,7 +1,10 @@
 let canvas = document.getElementById("picture");
-let base64 = null
+let base64 = null;
+let out = document.getElementById("outCanvas");
 function create_canvas64() {
-    let base64 = canvas.toDataURL('image/jpeg');
+    const ctxout = out.getContext("2d");
+    ctxout.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, out.width, out.height);
+    let base64 = out.toDataURL('image/jpeg');
     make_hiddendata('base64', base64,'camera');
     document.form.submit();
 }
@@ -28,7 +31,7 @@ window.onload = () => {
     const result = document.getElementById('picture');
     const cancel = document.getElementById('cancel');
     const shutter = document.getElementById('shutter');
-    var next = document.getElementById('next');
+    const next = document.getElementById('next');
 
     /** カメラ設定 */
     const constraints = {
@@ -47,11 +50,11 @@ window.onload = () => {
     navigator.mediaDevices.getUserMedia(constraints)
         .then((stream) => {
             video.srcObject = stream;
-            video.onloadedmetadata = (e) => {
+            video.onloadedmetadata = () => {
                 video.play();
             };
         })
-        .catch((err) => {
+        .catch(() => {
             alert('カメラが起動してません!!!!');
         });
 
@@ -68,7 +71,6 @@ window.onload = () => {
         // canvasに画像を貼り付ける
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-        base64 = canvas.toDataURL('image/jpeg');
         camera.style.display = 'none';
         shutter.style.display = 'none';
         result.style.display = 'inline';

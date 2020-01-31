@@ -14,7 +14,7 @@
             <p id='comment' style ='display: none'>赤枠に顔を合わせて決定を押してください</p>
             <canvas id='outCanvas' width='224' height='224' hidden></canvas>
         </section>
-        <form action="sendfile/" method="post" style="text-align: center" enctype="multipart/form-data"
+        <form action="result/" method="post" style="text-align: center" enctype="multipart/form-data"
               onsubmit="return checkPhase()" name="jpeg">
             {% csrf_token %}
             <label>

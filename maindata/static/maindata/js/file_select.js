@@ -1,9 +1,11 @@
 let canvas = document.getElementById("canvas");
 let scal = document.getElementById('scal');
+let com = document.getElementById('comment');
 let imagePath = "/file/openfile/noimg.jpg";
 const img = new Image();
 draw(canvas, imagePath);
 let file = null;
+
 const cw = canvas.width;
 const ch = canvas.height;
 const out = document.getElementById( 'outCanvas' );
@@ -48,6 +50,7 @@ $("#file").change(function () {
     };
     reader.readAsDataURL(file);
     scal.style.visibility = 'visible';
+    com.style.display = 'inline';
 });
 
 function checkPhase() {
