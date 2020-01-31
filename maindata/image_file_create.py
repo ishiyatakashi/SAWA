@@ -24,7 +24,7 @@ def image_create(request):
     # 保存する
     img.save(imgpass)
 
-    return imgpass
+    return filename
 
 
 def list_create(request):
