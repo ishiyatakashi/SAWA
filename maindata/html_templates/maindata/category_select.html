@@ -6,7 +6,7 @@
         {{ main }}
     {% endblock main%}
     <div class="modal-content">
-            <div class="wf-nicomoji"><h3>カテゴリせんたく</h3></div>
+            <div class="wf-nicomoji modal-header h4">カテゴリせんたく</div>
             <form action="sendfile/" method="post" style="text-align: center" enctype="multipart/form-data" onsubmit= "return checkPhase()" name="form">
             <!--<form action="result2/" class="center" method="post" name="selectCategory">-->
                 {% csrf_token %}
@@ -17,19 +17,29 @@
                         <input type="checkbox" name="actor" id="a_ch2" value="miura_haruma"  checked="checked"/>
                         <label for="a_ch2">三浦春馬</label>
                     </div>
+                    <div class="box">
+                        <input type="checkbox" checked="checked"/>
+                        <label>XXXX</label>
+                    </div>
+                    <div class="box">
+                        <input type="checkbox" checked="checked"/>
+                        <label>XXXX</label>
+                    </div>
                 </div>
-                <label class="aligncenter">
-                    <span class="js-modal-close btn btn-primary">
-                        閉じる
-                        <input type="button" style="display: none">
-                    </span>
-                </label>
-                <label class="left">
-                    <span class="btn btn-secondary">
-                        決定
-                        <input id="submit-button" type="submit" style="display: none">
-                    </span>
-                </label>
+                <div class="modal-footer">
+                    <label>
+                        <span class="js-modal-close btn btn-primary">
+                            閉じる
+                            <input type="button" style="display: none">
+                        </span>
+                    </label>
+                    <label>
+                        <span class="btn btn-secondary">
+                            決定
+                            <input id="submit-button" type="submit" style="display: none">
+                        </span>
+                    </label>
+                </div>
             </form>
     </div>
     {% block sub %}

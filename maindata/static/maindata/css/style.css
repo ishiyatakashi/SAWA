@@ -565,9 +565,9 @@ margin: none;
     width: 33%;
     margin: 2em auto;
     text-align: left;
-    border: 1px solid #ffe7e7;
+    border: 1px solid #ffffff;
     border-radius: 3px;
-    background: #ffe7e7;
+    background: #ffffff;
     float: left
 }
 
@@ -588,7 +588,7 @@ margin: none;
 .cp_ipcheck label:active:before,
 .cp_ipcheck input:checked + label:before {
     border-color: #00aaff;
-    background: #ffe7e7;
+    background: #ffffff;
 }
 
 .cp_ipcheck label {
@@ -604,7 +604,7 @@ margin: none;
     transition: all 0.15s ease;
     white-space: nowrap;
     text-overflow: ellipsis;
-    background: #ffe7e7;
+    background: #ffffff;
 }
 
 .cp_ipcheck label:before {
