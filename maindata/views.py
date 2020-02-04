@@ -2,8 +2,7 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.template import loader
 from django.template.context_processors import csrf
-from maindata import image_file_create
-from maindata import learning_resul
+from maindata.static.pyScript import requestPOST
 
 
 def top(request):
@@ -24,31 +23,9 @@ def category(request):
 
 
 def result(request):
-    print("result")
-    site = 'maindata/result.html'   # csrf対策
-    c = {}
-    c.update(csrf(request))
-    print(request.POST)#POST情報表示
-    if request.method == 'POST':
-        if 'base64' not in request.POST:
-            print("not file")
-            return HttpResponseRedirect("/file_select")#画像なし
-        imagepass = image_file_create.image_create(request)#画像ありPOSTあり
-    else:
-        return HttpResponseRedirect("/")#POST情報なし
-    re = learning_resul
-    parse, first, second = re.Study.select_learning()
-    template = loader.get_template('maindata/result.html')
-    return HttpResponse(render, template, {'first': first, 'second': second, 'lists': parse})
-
-
-def result2(request):
-    return render(request, 'maindata/result2.html')
-
-
-def send_file(request):
-    print("sendfile")
     site = 'maindata/result.html'
+    ct = 0
+    result_list = []
     # csrf対策
     c = {}
     c.update(csrf(request))
@@ -58,8 +35,21 @@ def send_file(request):
         if 'base64' not in request.POST:
             print("not file")
             return HttpResponseRedirect("/file_select")
-        imagepass = image_file_create.image_create(request)
+
     else:
         return HttpResponseRedirect("/")
+    send = requestPOST.requestPOST()
+    result_list = send.study(request)
+    for i in result_list.keys():
+        if ct == 0:
+            first = i
+        elif ct == 1:
+            second = i
+        ct = ct + 1
 
-    return render(request, site)
+    d = {
+        'first': first,
+        'second': second,
+        'lists': result_list
+    }
+    return render(request, site, d)
