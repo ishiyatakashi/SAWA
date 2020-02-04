@@ -8,6 +8,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+
 class Entertainer(models.Model):
     """芸能人"""
     id = models.IntegerField('ID', blank=True, default=0,primary_key=True )
