@@ -1,5 +1,4 @@
 ﻿{
-  "male_actor": {
     "sato_takeru": "佐藤健",
     "matuzaka_tori": "松坂桃李",
     "hosino_gen": "星野源",
@@ -16,8 +15,6 @@
     "nisijima_hidetosi":  "西島秀俊",
     "tanaka_kei": "田中圭",
     "sugino_yosuke": "杉野遥亮"
-  },
-  "Female_actor": {
     "kitagawa_keiko": "北川景子",
     "inoue_mao": "井上真央",
     "toda_erika": "戸田恵梨香",
@@ -27,6 +24,5 @@
     "sugisaki_hana":"杉咲花",
     "aragaki_yui":"新垣結衣",
     "honda_tubasa":"本田翼"
-  }
 }
       
