@@ -23,14 +23,6 @@ def category(request):
 
 
 def result(request):
-    return HttpResponse(render)
-
-
-def result2(request):
-    return render(request, 'maindata/result2.html')
-
-
-def send_file(request):
     site = 'maindata/result.html'
     ct = 0
     first = None

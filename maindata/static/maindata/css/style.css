@@ -627,9 +627,3 @@ margin: none;
 .wf-nicomoji {
     font-family: "Nico Moji", serif;
 }
-
-div.scl {
-    height: 370px;
-    overflow: scroll;
-    overflow-x: hidden;
-}
