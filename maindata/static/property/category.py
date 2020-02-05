@@ -24,7 +24,7 @@ class path(object):
 
     @img_path.setter
     def img_path(self, file_name):
-        self._img_path = self.img_dir + file_name + '.jpg'
+        self._img_path = self.img_dir + file_name
 
     @img_path.deleter
     def img_path(self):

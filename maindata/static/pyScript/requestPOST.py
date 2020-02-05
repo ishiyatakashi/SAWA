@@ -18,7 +18,7 @@ class requestPOST(object):
         binary_image = request.POST.get('base64')
         print(binary_image)
         # ファイルの名前を作成
-        filename = 'request_image' + str(random.randint(1, 10)) + '.jpg'
+        filename = 'request_image' + str(random.randint(1, 999999)) + '.jpg'
         # ファイルをバイナリから作る
         binary = base64.b64decode(binary_image.split(',')[1])
         img = Image.open(BytesIO(binary))
@@ -30,14 +30,14 @@ class requestPOST(object):
     def study(self, request):
         requestPOST.image_file_create(self, request)
         image_path = self.pr_path.img_path
-        pearList = self.pr_list.pearentscategorylist
+        pearlist = self.pr_list.pearentscategorylist
         select_dic = {}
         result_dic = []
         category_table = {}
         category_all = {}
         return_dic = {}
         sort_return_dic = {}
-        for i in pearList:
+        for i in pearlist:
             select_list = request.POST.get(i)
             if select_list is not None:
                 self.pr_path.category_json_path = i
