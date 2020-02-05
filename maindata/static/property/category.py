@@ -110,9 +110,8 @@ class list(object):
 
     @category_dic.setter
     def category_dic(self, json_path):
-        with open(json_path, 'r+', encoding='utf-8') as f:
-            if __name__ == '__main__':
-                self._category_dic = json.load(f)
+        with open(json_path, 'r+', encoding='utf-8-sig') as f:
+            self._category_dic = json.load(f)
 
     @category_dic.deleter
     def category_dic(self):

@@ -5,68 +5,26 @@
     {% block main %}
         {{ main }}
     {% endblock main%}
-            <!--modal中身-->
+    <div class="modal-content">
             <div class="wf-nicomoji modal-header h4">カテゴリせんたく</div>
-            <form action="result/" method="post" style="text-align: center" enctype="multipart/form-data" onsubmit="return checkPhase()" name="form">
-                <div class="cp_ipcheck scl">
-                   <div class="modal-header" >俳優</div>
+            <form action="result/" method="post" style="text-align: center" enctype="multipart/form-data" onsubmit= "return checkPhase()" name="form">
+            <!--<form action="result2/" class="center" method="post" name="selectCategory">-->
+                {% csrf_token %}
+                <div class="cp_ipcheck">
                     <div class="box">
-                        <input type="checkbox" name="actor" id="a_ch1" value="hosino_gen" checked="checked" />
+                        <input type="checkbox" name="actor" id="a_ch1" value="hosino_gen" checked="checked"/>
                         <label for="a_ch1">星野源</label>
-                        <input type="checkbox" name="actor" id="a_ch2" value="miura_haruma" checked="checked" />
+                        <input type="checkbox" name="actor" id="a_ch2" value="miura_haruma"  checked="checked"/>
                         <label for="a_ch2">三浦春馬</label>
-                        <input type="checkbox" name="actor" id="a_ch3" value="sato_ken" checked="checked" />
-                        <label for="a_ch3">佐藤健</label>
-                        <input type="checkbox" name="actor" id="a_ch4" value="kitagawa_keiko" checked="checked" />
-                        <label for="a_ch4">北川景子</label>
-                        <input type="checkbox" name="actor" id="a_ch5" value="inoue_mao" checked="checked" />
-                        <label for="a_ch5">井上真央</label>
-                        <input type="checkbox" name="actor" id="a_ch6" value="toda_erika" checked="checked" />
-                        <label for="a_ch6">戸田恵梨香</label>
-                        <input type="checkbox" name="actor" id="a_ch7" value="arimura_kasumi" checked="checked" />
-                        <label for="a_ch7">有村架純</label>
-                        <input type="checkbox" name="actor" id="a_ch8" value="kamisiraisi_mone" checked="checked" />
-                        <label for="a_ch8">上白石萌音</label>
                     </div>
                     <div class="box">
-                        <input type="checkbox" name="actor" id="a_ch9" value="kamisiraisi_moeka" checked="checked" />
-                        <label for="a_ch9">上白石萌歌</label>
-                        <input type="checkbox" name="actor" id="a_ch10" value="sugisaki_hana" checked="checked" />
-                        <label for="a_ch10">杉咲花</label>
-                        <input type="checkbox" name="actor" id="a_ch11" value="matuzaka_rouri" checked="checked" />
-                        <label for="a_ch11">松坂桃李</label>
-                        <input type="checkbox" name="actor" id="a_ch12" value="higaside_syoudai" checked="checked" />
-                        <label for="a_ch12">東出昌大</label>
-                        <input type="checkbox" name="actor" id="a_ch13" value="garai_kento" checked="checked" />
-                        <label for="a_ch13">賀来賢人</label>
-                        <input type="checkbox" name="actor" id="a_ch14" value="kamiki_ryunosuke" checked="checked" />
-                        <label for="a_ch14">神木隆之介</label>
-                        <input type="checkbox" name="actor" id="a_ch15" value="hukusi_souta" checked="checked" />
-                        <label for="a_ch15">福士蒼汰</label>
-                        <input type="checkbox" name="actor" id="a_ch16" value="tiba_yudai" checked="checked" />
-                        <label for="a_ch16">千葉雄大</label>
+                        <input type="checkbox" checked="checked"/>
+                        <label>XXXX</label>
                     </div>
                     <div class="box">
-                        <input type="checkbox" name="actor" id="a_ch17" value="mamiya_syoutarou" checked="checked" />
-                        <label for="a_ch17">間宮祥太朗</label>
-                        <input type="checkbox" name="actor" id="a_ch18" value="ayasugi_gou" checked="checked" />
-                        <label for="a_ch18">綾野剛</label>
-                        <input type="checkbox" name="actor" id="a_ch19" value="oguri_syun" checked="checked" />
-                        <label for="a_ch19">小栗旬</label>
-                        <input type="checkbox" name="actor" id="a_ch20" value="sakai_masato" checked="checked" />
-                        <label for="a_ch20">堺雅人</label>
-                        <input type="checkbox" name="actor" id="a_ch21" value="nisijima_syunsuke" checked="checked" />
-                        <label for="a_ch21">西島秀俊</label>
-                        <input type="checkbox" name="actor" id="a_ch22" value="niigaki_yui" checked="checked" />
-                        <label for="a_ch22">新垣結衣</label>
-                        <input type="checkbox" name="actor" id="a_ch23" value="honda_tubasa" checked="checked" />
-                        <label for="a_ch23">本田翼</label>
-                        <input type="checkbox" name="actor" id="a_ch24" value="tanaka_kei" checked="checked" />
-                        <label for="a_ch24">田中圭</label>
-                        <input type="checkbox" name="actor" id="a_ch25" value="sugino_yousuke" checked="checked" />
-                        <label for="a_ch25">杉野遥亮</label>
+                        <input type="checkbox" checked="checked"/>
+                        <label>XXXX</label>
                     </div>
-
                 </div>
                 <div class="modal-footer">
                     <label>
@@ -83,6 +41,7 @@
                     </label>
                 </div>
             </form>
+    </div>
     {% block sub %}
         {{ sub }}
     {% endblock sub %}
