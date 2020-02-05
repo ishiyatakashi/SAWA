@@ -1,19 +1,11 @@
-import cgi
-import sys
-import io
 import base64
-from typing import List, Any
-from keras.models import load_model
-from keras.preprocessing.image import img_to_array, load_img
-import os
-
-from PIL import Image
-import sys
-
-from django.core.files.storage import FileSystemStorage
-from SAWA.settings import BASE_DIR
 import random
 from io import BytesIO
+
+from PIL import Image
+from keras.models import load_model
+from keras.preprocessing.image import img_to_array, load_img
+
 import maindata.static.property.category as pr
 
 
@@ -27,12 +19,10 @@ class requestPOST(object):
         del self.pr_path.model_h5_path
         del self.pr_path.model_json_path
 
-    def image_file_create(self):
+    def image_file_create(self, request):
         binary_image = request.POST.get('base64')
-        # 保存用のメソッド
-        fileobject = FileSystemStorage()
         # ファイルの名前を作成
-        filename = 'request_image' + str(random.randint(1, 1000000000)) + '.jpg'
+        filename = 'request_image' + str(random.randint(1, 10)) + '.jpg'
         # ファイルをバイナリから作る
         binary = base64.b64decode(binary_image.splt(',')[1])
         img = Image.open(BytesIO(binary))
@@ -42,13 +32,15 @@ class requestPOST(object):
         img.save(self.pr_path.img_path)
 
     def study(self, request):
-        image_file_create()
-        pearList = self.pr_list.pearentsCategoryList
+        image_file_create(self, request)
+        image_path = self.pr_path.img_path
+        pearList = self.pr_list.pearentscategorylist
         select_dic = {}
         result_dic = []
         category_table = {}
         category_all = {}
         return_dic = {}
+        sort_return_dic = {}
         for i in pearList:
             select_list = request.POST.get(i)
             if select_list is not None:
@@ -61,13 +53,13 @@ class requestPOST(object):
             # 学習済みモデルの読込
             model = load_model(model_path)
             # 画像の読込
-            img = img_to_array(load_img(img_path, target_size=(224, 224)))
+            img = img_to_array(load_img(image_path, target_size=(224, 224)))
             # 0-1に変換
             img_nad = img_to_array(img) / 255
             # 4次元配列に
             img_nad = img_nad[None, ...]
             # 判定結果をリストに
-            pred_data = model.predict(self.img_nad, batch_size=1, verbose=0)
+            pred_data = model.predict(img_nad, batch_size=1, verbose=0)
             for pred in pred_data:
                 for score in pred:
                     pred_list.append(score)
@@ -81,9 +73,9 @@ class requestPOST(object):
                     if selectCategory == id:
                         return_dic[selectCategory] = value
                 for roma, japan in category_table[pCategory]:
-                    for key in retrun_dic.keys():
+                    for key in return_dic.keys():
                         if key == roma:
-                            return_dic[japan] = retrun_dic.pop(key)
+                            return_dic[japan] = return_dic.pop(key)
         for k, v in sorted(return_dic.items(), key=lambda x: x[-1]):
             sort_return_dic[k] = v
 

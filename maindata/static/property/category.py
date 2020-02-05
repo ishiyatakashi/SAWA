@@ -5,7 +5,7 @@ import json
 class path(object):
     def __init__(self):
         # カテゴリ（大分類）パス（固定値）
-        self.pearentsCategory_path = BASE_DIR + '/maindata/static/maindata/pearentsCategory/pearentsCategory.txt'
+        self.pearentscategory_path = BASE_DIR + '/maindata/static/maindata/pearentsCategory/pearentsCategory.txt'
         # 各ディレクトリのパス（固定値）
         self.img_dir = BASE_DIR + '/maindata/static/maindata/Upload_image/'
         self.model_dir = BASE_DIR + '/maindata/static/maindata/model/'
@@ -79,29 +79,33 @@ class path(object):
         self.category_text_path = None
 
     @property
-    def pearentsCategory_path(self):
-        return self.pearentsCategory_path
+    def pearentscategory_path(self):
+        return self.pearentscategory_path
+
+    @pearentscategory_path.setter
+    def pearentscategory_path(self, value):
+        self._pearentscategory_path = value
 
 
 class list(object):
     def __init__(self) -> object:
         self.category_dic = {}
-        self.pearentsCategoryList = []
+        self.pearentscategorylist = []
         self.all_category = []
 
     @property
-    def pearentsCategoryList(self):
-        return self.pearentsCategoryList
+    def pearentscategorylist(self):
+        return self.pearentscategorylist
 
-    @pearentsCategoryList.setter
-    def pearentsCategoryList(self, value):
-        pearents_path = path().pearentsCategory_path
+    @pearentscategorylist.setter
+    def pearentscategorylist(self, value):
+        pearents_path = path().pearentscategory_path
         with open(pearents_path, 'r+', encoding='utf-8') as f:
-            self.pearentsCategoryList = f.read().splitlines()
+            self.pearentscategorylist = f.read().splitlines()
 
-    @pearentsCategoryList.deleter
-    def pearentsCategoryList(self):
-        self.pearentsCategoryList = []
+    @pearentscategorylist.deleter
+    def pearentscategorylist(self):
+        self.pearentscategorylist = []
 
     @property
     def category_dic(self):
