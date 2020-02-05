@@ -33,7 +33,8 @@ def result2(request):
 def send_file(request):
     site = 'maindata/result.html'
     ct = 0
-    result_list = []
+    first = None
+    second = None
     # csrf対策
     c = {}
     c.update(csrf(request))

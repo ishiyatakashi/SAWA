@@ -5,82 +5,82 @@ import json
 class path(object):
     def __init__(self):
         # カテゴリ（大分類）パス（固定値）
-        self.pearentscategory_path = BASE_DIR + '/maindata/static/maindata/pearentsCategory/pearentsCategory.txt'
+        self._pearentscategory_path = BASE_DIR + '/maindata/static/maindata/pearentsCategory/pearentsCategory.txt'
         # 各ディレクトリのパス（固定値）
         self.img_dir = BASE_DIR + '/maindata/static/maindata/Upload_image/'
         self.model_dir = BASE_DIR + '/maindata/static/maindata/model/'
         self.category_json_dir = BASE_DIR + '/maindata/static/maindata/category_json/'
         self.category_text_dir = BASE_DIR + '/maindata/static/maindata/category_text/'
         # 各ファイルのパス（変動）
-        self.img_path = ''
-        self.model_json_path = ''
-        self.model_h5_path = ''
-        self.category_json_path = ''
-        self.category_text_path = ''
+        self._img_path = ''
+        self._model_json_path = ''
+        self._model_h5_path = ''
+        self._category_json_path = ''
+        self._category_text_path = ''
 
     @property
     def img_path(self):
-        return self.img_path
+        return self._img_path
 
     @img_path.setter
     def img_path(self, file_name):
-        self.img_path = self.img_dir + file_name + '.jpg'
+        self._img_path = self.img_dir + file_name + '.jpg'
 
     @img_path.deleter
     def img_path(self):
-        self.img_path = None
+        self._img_path = None
 
     @property
     def model_json_path(self):
-        return self.model_json_path
+        return self._model_json_path
 
     @model_json_path.setter
-    def model_json_path(self, file_name):
-        self.model_json_path = self.model_dir + file_name + '.json'
+    def model_json_path(self, file_name: str):
+        self._model_json_path = self.model_dir + file_name + '.json'
 
     @model_json_path.deleter
     def model_json_path(self):
-        self.model_json_path = None
+        self._model_json_path = None
 
     @property
     def model_h5_path(self):
-        return self.model_h5_path
+        return self._model_h5_path
 
     @model_h5_path.setter
-    def model_h5_path(self, file_name):
-        self.model_h5_path = self.model_dir + file_name + '.h5'
+    def model_h5_path(self, file_name: str):
+        self._model_h5_path = self.model_dir + file_name + '.h5'
 
     @model_h5_path.deleter
     def model_h5_path(self):
-        self.model_h5_path = None
+        self._model_h5_path = None
 
     @property
     def category_json_path(self):
-        return self.category_json_path
+        return self._category_json_path
 
     @category_json_path.setter
-    def category_json_path(self, file_name):
-        self.category_json_path = self.category_json_dir + file_name + '.json'
+    def category_json_path(self, file_name: str):
+        self._category_json_path = self.category_json_dir + file_name + '.json'
 
     @category_json_path.deleter
     def category_json_path(self):
-        self.category_json_path = None
+        self._category_json_path = None
 
     @property
     def category_text_path(self):
-        return self.category_text_path
+        return self._category_text_path
 
     @category_text_path.setter
     def category_text_path(self, file_name):
-        self.category_text_path = self.category_text_path + file_name + '.txt'
+        self._category_text_path = self.category_text_dir + file_name + '.txt'
 
     @category_text_path.deleter
     def category_text_path(self):
-        self.category_text_path = None
+        self._category_text_path = None
 
     @property
     def pearentscategory_path(self):
-        return self.pearentscategory_path
+        return self._pearentscategory_path
 
     @pearentscategory_path.setter
     def pearentscategory_path(self, value):
@@ -89,49 +89,44 @@ class path(object):
 
 class list(object):
     def __init__(self) -> object:
-        self.category_dic = {}
-        self.pearentscategorylist = []
-        self.all_category = []
+        self._category_dic = {}
+        self._pearentscategorylist = []
+        self._all_category = []
 
     @property
     def pearentscategorylist(self):
-        return self.pearentscategorylist
-
-    @pearentscategorylist.setter
-    def pearentscategorylist(self, value):
         pearents_path = path().pearentscategory_path
         with open(pearents_path, 'r+', encoding='utf-8') as f:
-            self.pearentscategorylist = f.read().splitlines()
+            self._pearentscategorylist = f.read().splitlines()
+        return self._pearentscategorylist
 
     @pearentscategorylist.deleter
     def pearentscategorylist(self):
-        self.pearentscategorylist = []
+        self._pearentscategorylist = []
 
     @property
     def category_dic(self):
-        return self.category_dic
+        return self._category_dic
 
     @category_dic.setter
-    def category_dic(self, name):
-        json_path = path().category_json_path(name)
+    def category_dic(self, json_path):
         with open(json_path, 'r+', encoding='utf-8') as f:
             if __name__ == '__main__':
-                self.category_dic = json.load(f)
+                self._category_dic = json.load(f)
 
     @category_dic.deleter
     def category_dic(self):
-        self.category_dic = {}
+        self._category_dic = {}
 
     @property
     def all_category(self):
-        return self.all_category
+        return self._all_category
 
     @all_category.setter
-    def all_category(self, name):
-        text_path = path().category_text_path(name)
+    def all_category(self, text_path):
         with open(text_path, 'r+', encoding='utf-8') as f:
-            self.all_category = f.read().splitlines()
+            self._all_category = f.read().splitlines()
 
     @all_category.deleter
     def all_category(self):
-        self.all_category = []
+        self._all_category = []
