@@ -1,9 +1,9 @@
 let canvas = document.getElementById("canvas");
 let scal = document.getElementById('scal');
 let com = document.getElementById('comment');
-let imagePath = "/file/openfile/noimg.jpg";
+let dammy = document.getElementById('dammy');
+
 const img = new Image();
-draw(canvas, imagePath);
 let file = null;
 
 const cw = canvas.width;
@@ -17,23 +17,14 @@ let iy = 0;
 let v = 1.0;   // 拡大縮小率
 
 
-function draw(canvas, imagePath) {
-    console.log("draw");
-    img.src = imagePath;
-    console.log(img.sizes);
-    img.addEventListener("load", function () {
-        canvas.width = 400;
-        canvas.height = 400;
-        const ctx = canvas.getContext("2d");
-        ctx.drawImage(img, 0, 0, img.width, img.height,0,0,cw,ch);
-        console.log("load!");
-    });
-}
+
 
 $("#file").change(function () {
 
     file = this.files[0];
     console.log('change');
+    dammy.style.display = 'none';
+    canvas.style.display = 'inline';
     const reader = new FileReader();
 
     reader.onload = function (evt) {
@@ -127,10 +118,11 @@ function make_hidden(name, value, formname) {
         return false // イベントを伝搬しない
     };
     canvas.onmousewheel = function ( _ev ){    // canvas ホイールで拡大縮小
-        let scl = parseInt( document.getElementById( 'scal' ).value + _ev.wheelDelta * 0.05 );
+        let scl = parseInt( parseInt( document.getElementById( 'scal' ).value ) + _ev.wheelDelta * 0.05 );
         if ( scl < 10  ) scl = 10;
         if ( scl > 400 ) scl = 400;
         document.getElementById( 'scal' ).value = scl;
         scaling( scl );
+        console.log(scl);
         return false // イベントを伝搬しない
     };
