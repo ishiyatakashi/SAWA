@@ -52,7 +52,7 @@ class requestPOST(object):
             self.pr_path.model_h5_path = i
             model_path = self.pr_path.model_h5_path
             # 学習済みモデルの読込
-            model = load_model(model_path,compile = False)
+            model = load_model(model_path, compile=False)
             # 画像の読込
             img = img_to_array(load_img(image_path, target_size=(224, 224)))
             # 0-1に変換

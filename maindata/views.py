@@ -27,7 +27,7 @@ def result(request):
     ct = 0
     first = None
     second = None
-    # csrf対策
+    # csrf対策 
     c = {}
     c.update(csrf(request))
     print(request.POST)
