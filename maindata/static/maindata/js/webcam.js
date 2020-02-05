@@ -8,7 +8,7 @@ function create_canvas64() {
     make_hiddendata('base64', base64,'camera');
     document.form.submit();
 }
-//formnameに対して画像のbase64データ(value)をnameという名前で埋め込む file_selectでも同じ文あります　
+//formnameに対して画像のbase64データ(value)をnameという名前で埋め込む file_selectでも同じ文あります
 function make_hiddendata(name, value, formname) {
         const q = document.createElement('input');
         q.type = 'hidden';
