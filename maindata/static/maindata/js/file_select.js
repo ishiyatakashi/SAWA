@@ -14,7 +14,7 @@ const ow = out.width;
 
 let ix = 0;  // 中心座標
 let iy = 0;
-let v = 1.0;   // 拡大縮小率
+let v = 1.0;   //拡大縮小率
 
 
 
