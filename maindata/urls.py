@@ -10,13 +10,9 @@ app_name = 'maindata'
 urlpatterns = [
     path('', views.top, name='top'),  # 一覧
     path('file_select/', views.file_select, name='file_select'),
-    path('camera/category/', views.category, name='category'),
     path('camera/', views.camera, name='camera'),
-    path('file_select/sendfile/', views.send_file, name='imageCR'),
-    path('result/', views.result, name='result'),
-    path('camera/category/result2/', views.result2, name='result2'),  # ベータ版画面
-    path('file_select/sendfile/result2/', views.result2, name='result2'),  # ベータ版画面,
-
+    path('camera/result/', views.result, name='result'),
+    path('file_select/result/', views.result, name='result'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
