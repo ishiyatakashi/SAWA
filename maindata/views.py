@@ -25,7 +25,8 @@ def category(request):
 def result(request):
     site = 'maindata/result.html'
     ct = 0
-    result_list = []
+    first = None
+    second = None
     # csrf対策
     c = {}
     c.update(csrf(request))
