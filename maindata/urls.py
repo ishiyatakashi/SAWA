@@ -13,6 +13,14 @@ urlpatterns = [
     path('camera/', views.camera, name='camera'),
     path('camera/result/', views.result, name='result'),
     path('file_select/result/', views.result, name='result'),
+    # 以下クイズモード
+    path('quiz/', views.quiz_top, name='quiz_top'),
+    path('quiz/file_select/', views.quiz_file, name='quiz_file'),
+    path('quiz/camera/', views.quiz_camera, name='quiz_camera'),
+    path('quiz/file_select/q', views.quiz_question, name='question'),
+    path('quiz/camera/q', views.quiz_question, name='question'),
+    path('quiz/file_select/q/answer', views.quiz_answer, name='answer'),
+    path('quiz/camera/q/answer', views.quiz_answer, name='answer'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
