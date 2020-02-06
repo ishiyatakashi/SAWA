@@ -6,7 +6,6 @@
 {% load static %}
 {% block extra_css %}<link rel="stylesheet" href="{% static 'maindata/css/modal.css' %}">{% endblock %}
 {% block main %}
-    <div id="wrapper">
         <form action="result/" method="post" style="text-align: center" name="camera" enctype="multipart/form-data"
         onsubmit="return create_canvas64()">
             <section class="gridWrapper img">
@@ -40,17 +39,11 @@
                     <input type="button" style="display: none">
                 </span>
             </label>
-
-            <div class="modal js-modal">
-                <div class="modal__bg js-modal-close"></div>
-                <div class="modal__content">
 {% endblock main %}
                     <!-- category_select.html --->
 {% block sub %}
-                </div>
-            </div>
-        </form>
+    </form>
         <script src="{% static 'maindata/js/webcam.js' %}"></script>
         <script src="{% static 'maindata/js/modal.js' %}"></script>
-    </div>
 {% endblock sub %}
+

@@ -5,6 +5,9 @@
     {% block main %}
         {{ main }}
     {% endblock main%}
+    <div class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
             <!--modal中身-->
             <div class="wf-nicomoji modal-header h4">カテゴリせんたく</div>
             <form action="result/" method="post" style="text-align: center" enctype="multipart/form-data" onsubmit="return checkPhase()" name="form">
@@ -83,6 +86,8 @@
                     </label>
                 </div>
             </form>
+            </div>
+        </div>
     {% block sub %}
         {{ sub }}
     {% endblock sub %}
