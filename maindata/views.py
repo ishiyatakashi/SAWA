@@ -23,9 +23,6 @@ def category(request):
 
 def result(request):
     site = 'maindata/result.html'
-    ct = 0
-    first = None
-    second = None
     # csrf対策
     c = {}
     c.update(csrf(request))
@@ -38,6 +35,48 @@ def result(request):
 
     else:
         return HttpResponseRedirect("/")
+    d = ai_work(request)
+    return render(request, site, d)
+
+
+def quiz_top(request):
+    return render(request, 'maindata/.html')
+
+
+def quiz_file(request):
+    return render(request, 'maindata/file_select.html')
+
+
+def quiz_camera(request):
+    return render(request, 'maindata/camera.html')
+
+
+def quiz_question(request):
+    site = 'maindata/question.html'
+    # csrf対策
+    c = {}
+    c.update(csrf(request))
+    print(request.POST)
+    print("BYMYBABY")
+    if request.method == 'POST':
+        if 'base64' not in request.POST:
+            print("NOT FILE")
+            return HttpResponseRedirect("/")
+
+    else:
+        return HttpResponseRedirect("/")
+    d = ai_work(request)
+    return render(request, site, d)
+
+
+def quiz_answer(request):
+    return render(request, 'maindata/answer.html')
+
+
+def ai_work(request):
+    ct = 0
+    first = None
+    second = None
     send = requestPOST.requestPOST()
     result_list = send.study(request)
     for i in result_list.keys():
@@ -50,6 +89,6 @@ def result(request):
     d = {
         'first': first,
         'second': second,
-        'lists': result_list
+        'lists': result_list,
     }
-    return render(request, site, d)
+    return d
