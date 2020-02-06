@@ -4,7 +4,10 @@ from io import BytesIO
 
 from PIL import Image
 from keras.models import load_model
+from keras.models import model_from_json
 from keras.preprocessing.image import img_to_array, load_img
+from keras.optimizers import SGD
+import math
 
 import maindata.static.property.category as pr
 
@@ -32,13 +35,13 @@ class requestPOST(object):
         image_path = self.pr_path.img_path
         pearlist = self.pr_list.pearentscategorylist
         select_dic = {}
-        result_dic = []
+        result_dic = {}
         category_table = {}
         category_all = {}
         return_dic = {}
         sort_return_dic = {}
         for i in pearlist:
-            select_list = request.POST.get(i)
+            select_list = request.POST.getlist(i)
             if select_list is not None:
                 self.pr_path.category_json_path = i
                 self.pr_path.category_text_path = i
@@ -49,10 +52,11 @@ class requestPOST(object):
                 category_all[i] = self.pr_list.all_category
         for i in select_dic.keys():
             pred_list = []
+            self.pr_path.model_json_path = i
             self.pr_path.model_h5_path = i
             model_path = self.pr_path.model_h5_path
             # 学習済みモデルの読込
-            model = load_model(model_path, compile=False)
+            model = load_model(model_path)
             # 画像の読込
             img = img_to_array(load_img(image_path, target_size=(224, 224)))
             # 0-1に変換
@@ -72,8 +76,8 @@ class requestPOST(object):
             for selectCategory in categpryList:
                 for id, value in result_dic[pCategory].items():
                     if selectCategory == id:
-                        return_dic[selectCategory] = value
-                for roma, japan in category_table[pCategory]:
+                        return_dic[selectCategory] = math.floor(value*100)
+                for roma, japan in category_table[pCategory].items():
                     for key in return_dic.keys():
                         if key == roma:
                             return_dic[japan] = return_dic.pop(key)
