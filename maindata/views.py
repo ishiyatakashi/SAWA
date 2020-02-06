@@ -40,10 +40,16 @@ def result(request):
         return HttpResponseRedirect("/")
     send = requestPOST.requestPOST()
     result_list = send.study(request)
-    first = max(result_list, key=result_list.get)
+    for i in result_list.keys():
+        if ct == 0:
+            first = i
+        elif ct == 1:
+            second = i
+        ct = ct + 1
 
     d = {
         'first': first,
+        'second': second,
         'lists': result_list
     }
     return render(request, site, d)
