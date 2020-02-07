@@ -80,19 +80,11 @@ def quiz_answer(request):
 def ai_work(request):
     ct = 0
     first = None
-    second = None
     send = requestPOST.requestPOST()
     result_list = send.study(request)
-    for i in result_list.keys():
-        if ct == 0:
-            first = i
-        elif ct == 1:
-            second = i
-        ct = ct + 1
-
+    first = max(result_list,key=result_list.get)
     d = {
         'first': first,
-        'second': second,
         'lists': result_list,
     }
     return d
