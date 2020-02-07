@@ -5,19 +5,21 @@
 {% block content %}
 
 
-    <div class="" style="font-size: 40px">あなたは....</div>
-    <div class="" style="font-size: 50px"><a style="font-size: 60px">{{ first }}</a>っぽいです。
+    <div class="wf-nicomoji" style="font-size: 100px">あなたは....</div>
+    <div class="wf-nicomoji" style="font-size: 100px"><a style="font-size: 120px">{{ first }}</a>っぽいです。
     </div>
-    <div class="details">
-        {% for key,value in lists.items %}
+    <!--AIの内容-------
+    <div class="details"></div>
+        { for key,value in lists.items %}
             <div class='box'>
-                <a style='font-size: 30px'>{{ key }}</a>
-                <a style='font-size: 30px'>{{ value }}</a>
+                <a style='font-size: 30px'>{ key }}</a>
+                <a style='font-size: 30px'>{ value }}</a>
             </div>
-            {% empty %}
+            { empty %}
                 the list is empty.
-        {% endfor %}
+        { endfor %}
     </div>
+    -->
 
 
     <!-- Twitter 共有ボタンスクリプト -->
