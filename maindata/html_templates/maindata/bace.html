@@ -18,9 +18,15 @@
 <body>
     <div id="header">
         <div class="inner">
-            <div class="logo">
-                <a>SAWA</a>
-            </div>
+            <label class="header-label">
+                <form action="top/" method="get">
+                    <div class="logo">
+                        <a>SAWA</a>
+                    </div>
+                    {% csrf_token %}
+                    <input type="submit" style="display: none" name="top">
+                </form>
+            </label>
         </div>
     </div>
     <div id="wrapper">

@@ -633,3 +633,9 @@ div.scl {
     overflow: scroll;
     overflow-x: hidden;
 }
+
+label.header-label{
+    padding: 0;
+    margin: 0;
+    height:50px;
+}

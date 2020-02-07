@@ -8,6 +8,10 @@ def top(request):
     """top/タイトル一覧一覧"""
     return render(request, 'maindata/top.html')
 
+def returns(request):
+    """top/タイトル一覧一覧"""
+    return HttpResponseRedirect("/")
+
 
 def camera(request):
     return render(request, 'maindata/camera.html')
