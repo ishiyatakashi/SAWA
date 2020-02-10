@@ -5,15 +5,18 @@
     {% block main %}
         {{ main }}
     {% endblock main%}
+    {% load static %}
     <div class="modal js-modal">
         <div class="modal__bg js-modal-close"></div>
         <div class="modal__content">
             <!--modal中身-->
             <div class="wf-nicomoji modal-header h4">カテゴリせんたく</div>
-            <form action="result/" method="post" style="text-align: center" enctype="multipart/form-data" onsubmit="return checkPhase()" name="form">
+            <form action="result/" method="post" style="text-align: center" enctype="multipart/form-data" onsubmit="return checkPhase()" name="formc" id="select_form">
                 <div class="cp_ipcheck scl">
                    <div class="modal-header">俳優</div>
                     <div class="box">
+                        <input type="checkbox" name="actorM" id="a_ch0"  checked="checked" onclick="ActorAllChecked()"/>
+                        <label for="a_ch0"> 全選択</label>
                         <input type="checkbox" name="actor" id="a_ch1" value="hosino_gen" checked="checked" />
                         <label for="a_ch1">星野源</label>
                         <input type="checkbox" name="actor" id="a_ch2" value="miura_haruma" checked="checked" />
@@ -69,7 +72,7 @@
                         <input type="checkbox" name="actor" id="a_ch25" value="sugino_yousuke" checked="checked" />
                         <label for="a_ch25">杉野遥亮</label>
                     </div>
-
+                    <script src="{% static 'maindata/js/selectBOX.js' %}"></script>
                 </div>
                 <div class="modal-footer">
                     <label>
