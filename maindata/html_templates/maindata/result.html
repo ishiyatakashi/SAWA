@@ -6,7 +6,7 @@
 
 
     <div class="wf-nicomoji" style="font-size: 100px">あなたは....</div>
-    <div class="wf-nicomoji" style="font-size: 100px"><a style="font-size: 120px">{{ first }}</a>っぽいです。
+    <div class="wf-nicomoji" style="font-size: 100px"><a style="font-size: 110px">{{ first }}</a>っぽいです。
     </div>
     <!--AIの内容-------
     <div class="details"></div>
@@ -23,13 +23,21 @@
 
 
     <!-- Twitter 共有ボタンスクリプト -->
-    <div class="col-12">
-        <div class="col-7 float-left"></div>
-        <div class="col-2 float-left">
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large"
-               data-text="あなたは〇〇っぽい？\nわたしは{{ first }}っぽいです。\n皆さんもやってみませんか？" data-lang="ja" data-show-count="false">Tweet</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
+
+    <div class="alignright col-12">
+
+        <label class="col-10">
+            <form action="top/" method="get">
+                <span class="btn-square">
+                    トップに戻る
+                    <input type="submit" style="display: none" name="top">
+                </span>
+            </form>
+        </label>
+        <div class="col-2"></div>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large"
+           data-text="あなたは〇〇っぽい？\nわたしは{{ first }}っぽいです。\n皆さんもやってみませんか？" data-lang="ja" data-show-count="false">Tweet</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     <!-- Facebook 共有ボタンスクリプト (保留!!!!)-->
     <!--

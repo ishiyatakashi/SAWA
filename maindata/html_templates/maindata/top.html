@@ -15,19 +15,19 @@
             </article>
             <article class="grid col-12">
                 <label>
-                    <form action="file_select/" method="get">
-                    <span class="btn-square">
-                        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> ファイルから選択
-                        <input type="submit" style="display: none" name="top">
-                    </span>
+                    <form action="{{ mode|yesno:"file_select/,q_file_select/" }}" method="get">
+                        <span class="btn-square">
+                            <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> ファイルから選択
+                            <input type="submit" style="display: none" name="top">
+                        </span>
                     </form>
                 </label>
                 <label>
-                    <form action="camera/" method="get">
-                    <span class="btn-square">
-                        <span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Webカメラで撮影
-                        <input type="submit" style="display: none" name="top">
-                    </span>
+                    <form action="{{ mode|yesno:"camera/,q_camera/" }}" method="get">
+                        <span class="btn-square">
+                            <span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Webカメラで撮影
+                            <input type="submit" style="display: none" name="top">
+                        </span>
                     </form>
                 </label>
                 <label>

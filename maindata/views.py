@@ -30,8 +30,7 @@ def result(request):
     # csrf対策
     c = {}
     c.update(csrf(request))
-    print(request.POST)
-    print("AAAAAAA")
+
     if request.method == 'POST':
         if 'base64' not in request.POST:
             print("not file")

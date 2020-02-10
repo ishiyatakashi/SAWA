@@ -1,0 +1,49 @@
+{% extends "maindata/category_select.html" %}
+
+{% block title %}{% endblock title %}
+{% load static %}
+    <script src="{% static 'maindata/js/webcam.js' %}"></script>
+{% load static %}
+{% block extra_css %}<link rel="stylesheet" href="{% static 'maindata/css/modal.css' %}">{% endblock %}
+{% block main %}
+        <form action="q_result/" method="post" style="text-align: center" name="camera" enctype="multipart/form-data"
+        onsubmit="return create_canvas64()">
+            <section class="gridWrapper img">
+                <br>
+                <video id="camera" width="336" height="336" class="camera"></video>
+                <canvas id="picture" width="336" height="336" class="result"></canvas>
+                <canvas id='outCanvas' width='224' height='224' hidden></canvas>
+            </section>
+            {% csrf_token %}
+            <div id="cancel" class="cancel">
+                <label>
+                    <br><br>
+                    <span class="btn btn-primary">
+                        撮りなおす
+                        <input type="button" style="display: none" id="cancel" class="cancel">
+                    </span>
+                </label>
+            </div>
+            <div id="shutter" class="shutter">
+                <label>
+                    <br><br>
+                    <span class="btn btn-primary">
+                        写真を撮る
+                        <input type="button" style="display: none" id="shutter" class="shutter">
+                    </span>
+                </label>
+            </div>
+            <label>
+                <span class="js-modal-open btn btn-secondary" style="display: none" id="next">
+                    決定
+                    <input type="button" style="display: none">
+                </span>
+            </label>
+{% endblock main %}
+                    <!-- category_select.html --->
+{% block sub %}
+    </form>
+        <script src="{% static 'maindata/js/webcam.js' %}"></script>
+        <script src="{% static 'maindata/js/modal.js' %}"></script>
+{% endblock sub %}
+

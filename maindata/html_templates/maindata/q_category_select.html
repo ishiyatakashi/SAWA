@@ -1,0 +1,47 @@
+{% extends "maindata/bace.html" %}
+
+{% block title %}{% endblock title %}
+{% block content %}
+    {% block main %}
+        {{ main }}
+    {% endblock main%}
+    <div class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+            <!--modal中身-->
+            <div class="wf-nicomoji modal-header h4">カテゴリせんたく</div>
+            <form action="q_result/" method="post" style="text-align: center" enctype="multipart/form-data" onsubmit="return checkPhase()" name="form">
+                <div class="cp_ipcheck scl">
+                    <div class="box">
+                        <input type="radio" name="actor" id="a_ch1" value="hosino_gen" checked="checked" />
+                        <label for="a_ch1">俳優</label>
+                    </div>
+                    <div class="box">
+                        XXX
+                    </div>
+                    <div class="box">
+                        XXX
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <label>
+                        <span class="js-modal-close btn btn-primary">
+                            閉じる
+                            <input type="button" style="display: none">
+                        </span>
+                    </label>
+                    <label>
+                        <span class="btn btn-secondary">
+                            決定
+                            <input id="submit-button" type="submit" style="display: none">
+                        </span>
+                    </label>
+                </div>
+            </form>
+            </div>
+        </div>
+    {% block sub %}
+        {{ sub }}
+    {% endblock sub %}
+{% endblock content %}
