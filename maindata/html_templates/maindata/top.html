@@ -3,6 +3,7 @@
 {% block title %}{% endblock title %}
 
 {% load static %}
+<script src="{% static 'maindata/js/mode.js' %}"></script>
 {% block extra_css %}<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 {% endblock %}
 {% block content %}
@@ -14,30 +15,60 @@
                 <div class="Dekaisub wf-nicomoji">あなたのかお〇〇っぽいかも？</div>
             </article>
             <article class="grid col-12">
-                <label>
-                    <form action="{{ mode|yesno:"file_select/,q_file_select/" }}" method="get">
-                        <span class="btn-square">
-                            <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> ファイルから選択
-                            <input type="submit" style="display: none" name="top">
-                        </span>
-                    </form>
-                </label>
-                <label>
-                    <form action="{{ mode|yesno:"camera/,q_camera/" }}" method="get">
-                        <span class="btn-square">
-                            <span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Webカメラで撮影
-                            <input type="submit" style="display: none" name="top">
-                        </span>
-                    </form>
-                </label>
-                <label>
-                    <form action="quiz/" method="get">
-                    <span class="btn-square">
-                        <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> クイズモード
-                        <input type="submit" style="display: none" name="quiz">
-                    </span>
-                    </form>
-                </label>
+                <mode>
+                     <!-------nomalmode-------->
+
+                    <label class="nomal">
+                        <form action="file_select/" method="get">
+                            <span class="btn-square">
+                                <span class="glyphicon glyphicon-picture" aria-hidden="true"/> ファイルから選択
+                                <input type="submit" style="display: none" name="top">
+                            </span>
+                        </form>
+                    </label>
+                    <label class="nomal">
+                        <form action="camera/" method="get">
+                            <span class="btn-square">
+                                <span class="glyphicon glyphicon-camera" aria-hidden="true"/> Webカメラで撮影
+                                <input type="submit" style="display: none" name="top">
+                            </span>
+                        </form>
+                    </label>
+                    <div id="mode">
+                        <div id="modecahnge">
+                            <label>
+                                <form action="quiz/" method="get">
+                                    <span class="btn-square mode mode-js-change">
+                                        <span class="glyphicon glyphicon-question-sign" aria-hidden="true"/> クイズモード
+                                        <input type="button" style="display: none" name="modechange" id="button">
+                                    </span>
+                                </form>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <!-------quizmode------>
+                    <label class="nomal">
+                        <form action="q_file_select/" method="get">
+                            <span class="btn-square">
+                                <span class="glyphicon glyphicon-picture" aria-hidden="true"/> ファイルから選択
+                                <input type="submit" style="display: none" name="top">
+                            </span>
+                        </form>
+                    </label>
+                    <label class="nomal">
+                        <form action="q_camera/" method="get">
+                            <span class="btn-square">
+                                <span class="glyphicon glyphicon-camera" aria-hidden="true"/> Webカメラで撮影
+                                <input type="submit" style="display: none" name="top">
+                            </span>
+                        </form>
+                    </label>
+                </mode>
+
+
+
                 <!--
                 <label>
                     <form action="category/" method="get">
@@ -50,4 +81,5 @@
                 -->
             </article>
         </section>
+    <script src="{% static 'maindata/js/mode.js' %}"></script>
 {% endblock content %}
